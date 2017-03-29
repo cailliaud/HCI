@@ -12,8 +12,10 @@ public class Tentative {
 	private Exercice exercice;
 	/*
 	 * Difference between each statute
-	 * 0 -> the exercice have been not done yet. 
-	 * 1 -> the exercice have been done. 
+	 * 0 -> la tentative n'a pas encore été faite
+	 * 1 -> la tentative a été faite par l'élève, en attente de correction
+	 * 2 -> tentative validé
+	 * 3 -> tentative a refaire
 	 */
 	private int statut;
 	private String note;
@@ -30,11 +32,20 @@ public class Tentative {
 	
 	
 	/*
-	 * 
+	 * Ajout de l'action à la tentative. 
 	 */
-	public addAction(){
-	
+	public void ajoutAction( int code, int ordre){
+		
 	}
+	
+	/*
+	 * Suppression de l'action de la tentative 
+	 */
+	public void supprimeAction( int code, int ordre){
+	}
+	
+	
+
 	
 	
 	
@@ -42,7 +53,6 @@ public class Tentative {
 	public int getIdTentative() {
 		return idTentative;
 	}
-
 
 	public ArrayList<int[]> getActions() {
 		return actions;
