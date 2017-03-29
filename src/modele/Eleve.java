@@ -2,42 +2,27 @@ package modele;
 
 
 import java.net.URL;
+import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 
-public class Eleve {
-	private int id;
-	private ImageIcon icone;
-	private String nom;
-	private String prenom;
-	private String sexe;
+public class Eleve extends  Utilisateur {
 	private int age;
-	private int idClasse;
 	private Classe maClasse;
+	private ArrayList<Tentative> mesTentatives;
 	
-	public Eleve(int id, String nom, String prenom, String sexe, int age ){
-		this.id =id;
-		this.nom=nom;
-		this.prenom=prenom;
-		this.sexe = sexe;
+	public Eleve(String prenom, String nom, boolean homme, int age){
+		super(prenom,nom,homme,"child_icon.png");
 		this.age=age;
-		URL urlimage = Eleve.class.getResource(
-                "/resources/child_icon.png");
-		this.icone = new ImageIcon(urlimage);
+		this.mesTentatives= new ArrayList<Tentative>();
+		
 
 
 	}
 	
-	public Eleve(int id, String nom, String prenom, String sexe,int age, String icone ){
-		this.id =id;
-		this.nom=nom;
-		this.prenom=prenom;
-		this.sexe = sexe;
+	public Eleve(String nom, String prenom, boolean homme,int age, String icone ){
+		super(prenom,nom,homme,icone);
 		this.age=age;
-		URL urlimage = Eleve.class.getResource(
-                "/resources/"+icone);
-		this.icone = new ImageIcon(urlimage);
-	
 
 	}
 	
@@ -45,70 +30,25 @@ public class Eleve {
 		this.maClasse=c;
 	}
 	
-
+	public Classe getClasse(){
+		return this.maClasse;
+	}
 	
-	public int getId() {
-		return id;
-	}
-
-
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-
-
-	public String getNom() {
-		return this.nom;
-	}
-
-
-
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-
-
-
-	public String getPrenom() {
-		return this.prenom;
-	}
-
-
-
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
-	}
-
-
 
 	public String toString(){
 		return this.prenom;
 	}
 	
-	public Classe getClasse(){
-		return this.maClasse;
+	/**
+	 * Methode pour ajouter une tentative à l'élève
+	 * @param newTentative
+	 */
+	public addTentative(Tentative newTentative){
+		this.mesTentatives.add(newTentative);
 	}
 	
-	public String getSexe() { 
-		return this.sexe;
-	}
 	
-	public int getAge(){
-		return this.age;
-	}
-	
-	public ImageIcon getIcone(){
-		return this.icone;
-	}
-	
-	public void setSexe(String newS) {
-		this.sexe=newS;
-	}
-	
-	public void setAge(int newA){
-		this.age=newA;
-	}
+
+
 
 }
