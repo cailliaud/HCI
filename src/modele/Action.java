@@ -7,7 +7,7 @@ package modele;
 public class Action {	
 	
 	/**
-	 * idAction int identifiant de l'action, autoincrement
+	 * idAction int identifiant de l'action, autoincrement --> pas d'id
 	 */
 	private int idAction;
 	/**
@@ -16,8 +16,8 @@ public class Action {
 	 * 2 -> tourner,
 	 * 3 -> ecrire,
 	 * 4 -> arreter d'écrire,
-	 * 5 -> changer de couleur,
-	 * 6 -> changer de vitesse.
+	 * 5 -> changer de couleur : un id par couleur
+	 * 6 -> changer de vitesse : un id par vitesse
 	 */
 	private int codeAction;
 	/**
@@ -25,7 +25,7 @@ public class Action {
 	 */
 	private int ordreAction;
 	/**
-	 * tortue TortueG tortue utilisée dans la tentative
+	 * tortue TortueG tortue utilisée dans la tentative --> inutile : index arraylist
 	 */
 	private TortueG tortue;
 	
@@ -40,6 +40,8 @@ public class Action {
 		this.ordreAction = ordreAction;
 		this.tortue = tortue;
 	}
+	
+	//rejouer une action
 	
 	public int getIdAction() {
 		return idAction;
