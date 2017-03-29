@@ -61,14 +61,14 @@ public class Tentative {
 	 */
 	
 	public ArrayList<int[]> getActions() {
-		return actions;
+		return null;
 	}
 	
 	/**
 	 * setAction permet de rentrer une nouvelle action 
 	 */
 	public void setActions(ArrayList<int[]> actions) {
-		this.actions = actions;
+		
 	}
 	
 	/**
