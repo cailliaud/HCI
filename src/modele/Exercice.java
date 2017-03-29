@@ -95,10 +95,10 @@ public class Exercice {
 	}
 	
     /**
-     * Méthode qui permet de retourner toutes les tentatives
-     * @return la tortue associée à l'exercice
+     * Méthode qui permet de retourner toutes les tentatives concernant l'exercice
+     * @return La liste de tentatives
      */
-	public ArrayList<Tentative> getTentativesExercice(Classe classe){
+	public ArrayList<Tentative> getTentativesExercice(){
 		return null;
 	}
 }
