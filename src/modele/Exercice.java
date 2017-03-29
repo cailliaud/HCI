@@ -93,12 +93,4 @@ public class Exercice {
 	public void setTortue(TortueG tortue) {
 		this.tortue = tortue;
 	}
-	
-    /**
-     * Méthode qui permet de retourner toutes les tentatives concernant l'exercice
-     * @return La liste de tentatives
-     */
-	public ArrayList<Tentative> getTentativesExercice(){
-		return null;
-	}
 }
