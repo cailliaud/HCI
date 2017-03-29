@@ -48,28 +48,28 @@ public class Classe {
 	}
 	/**
 	 * Cette méthode permet de changer le niveau de la classe.
-	 * @param Le nouveau nom du niveau de la classe
+	 * @param nom Le nouveau nom du niveau de la classe
 	 */
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
 	/**
 	 * Cette méthode permet de retourner les informations du professeur en charge de la classe en appelant la classe Professeur.
-	 * @return L'identifiant et le nom du professeur.
+	 * @return profL'identifiant et le nom du professeur.
 	 */
 	public Professeur getProf(){
 		return this.prof;
 	}
 	/**
 	 * Cette méthode permet de changer les informations du professeur en charge de la classe en appelant la classe Professeur.
-	 * @return prof Nouveau professeur en charge de la classe.
+	 * @param prof Nouveau professeur en charge de la classe.
 	 */
 	public void setProf(Professeur prof){
 		this.prof=prof;
 	}
 	/**
 	 * Cette méthode permet de retourner la liste d'élèves de la classe.
-	 * @return L'ensemble des élèves étant dans la classe.
+	 * @return listeEleves L'ensemble des élèves étant dans la classe.
 	 */
 	public ArrayList<Eleve> getListeEleves() {
 		return listeEleves;
@@ -86,7 +86,7 @@ public class Classe {
 	
 	/**
 	 * Cette méthode permet de retourner la liste d'exercices disponible pour la classe.
-	 * @return L'ensemble des exercices étant dans la classe.
+	 * @return listeExercice L'ensemble des exercices étant dans la classe.
 	 */
 	public ArrayList<Exercice> getListeExercice() {
 		return listeExercice;
@@ -98,6 +98,12 @@ public class Classe {
 	 */
 	public void addExercice (Exercice exercice){
 		this.listeExercice.add(exercice);
+	}
+	/**
+	 * Cette méthode permet d'enlever un exercice dans la liste.
+	 * @param exercice Un exercice doit être dans les paramètres afin de le supprimer dans la liste des exercices.
+	 */
+	public void removeExercice (Exercice exercice){
 	}
 
 }
