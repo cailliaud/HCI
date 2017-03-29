@@ -2,14 +2,20 @@ package modele;
 
 public class Action {
 	
+	//Declaration des variables
 	private int idAction;
 	private int codeAction;
 	private int ordreAction;
+	private TortueG tortue;
 	
-	public Action(int codeAction, int ordreAction) {
+	//Constructeur
+	public Action(int codeAction, int ordreAction, TortueG tortue) {
 		this.codeAction = codeAction;
 		this.ordreAction = ordreAction;
+		this.tortue = tortue;
 	}
+	
+	
 	
 	
 	//Getters
@@ -23,5 +29,9 @@ public class Action {
 
 	public int getOrdreAction() {
 		return ordreAction;
+	}
+	
+	public TortueG getTortue() {
+		return tortue;
 	}
 }
