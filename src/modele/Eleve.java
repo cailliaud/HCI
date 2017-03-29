@@ -47,6 +47,24 @@ public class Eleve extends  Utilisateur {
 		this.mesTentatives.add(newTentative);
 	}
 	
+	/**
+	 * Methode pour obtenir toutes les tentatives d'un eleve quelque soit l'exercice
+	 * @return ArrayList<Tentative> Liste des tentatives
+	 */
+	public ArrayList<Tentative> getTentatives(){
+		return this.mesTentatives;
+	}
+	
+	
+	/**
+	 * Methode pour récupérer les tentatives d'un élève selon un exercice
+	 * @param exercice Exercice recherché
+	 * @return ArrayList<Tentative> Liste des tentatives pour l'exercice demandé
+	 */
+	public ArrayList<Tentative> getListTentativeSelonExercice (Exercice exercice){
+		return null;
+	}
+	
 	
 
 
