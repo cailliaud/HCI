@@ -40,10 +40,10 @@ public class Eleve extends  Utilisateur {
 	}
 	
 	/**
-	 * Methode pour ajouter une tentative à l'élève
+	 * Methode pour ajouter une tentative ï¿½ l'ï¿½lï¿½ve
 	 * @param newTentative
 	 */
-	public addTentative(Tentative newTentative){
+	public void addTentative(Tentative newTentative){
 		this.mesTentatives.add(newTentative);
 	}
 	
@@ -57,9 +57,9 @@ public class Eleve extends  Utilisateur {
 	
 	
 	/**
-	 * Methode pour récupérer les tentatives d'un élève selon un exercice
-	 * @param exercice Exercice recherché
-	 * @return ArrayList<Tentative> Liste des tentatives pour l'exercice demandé
+	 * Methode pour rï¿½cupï¿½rer les tentatives d'un ï¿½lï¿½ve selon un exercice
+	 * @param exercice Exercice recherchï¿½
+	 * @return ArrayList<Tentative> Liste des tentatives pour l'exercice demandï¿½
 	 */
 	public ArrayList<Tentative> getListTentativeSelonExercice (Exercice exercice){
 		return null;

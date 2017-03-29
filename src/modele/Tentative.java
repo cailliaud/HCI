@@ -55,11 +55,11 @@ public class Tentative {
 	}
 
 	public ArrayList<int[]> getActions() {
-		return actions;
+		return null;
 	}
 	
 	public void setActions(ArrayList<int[]> actions) {
-		this.actions = actions;
+		
 	}
 	
 	public Exercice getExercice() {
