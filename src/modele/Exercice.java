@@ -7,7 +7,7 @@ import javax.swing.ImageIcon;
  * 	- Un numéro unique qui permet de l'identifier
  *  - Un nom 
  *  - Une image
- *  - Une tortueG 
+ *  - Une tortue 
  * @author Groupe 4
  * @version 29/03/2017
  */
