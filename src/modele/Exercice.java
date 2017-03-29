@@ -21,6 +21,7 @@ public class Exercice {
 	
     /**
      * Constructeur, initialisation d'un exercice
+     * @param nom : Le nom de l'exercice
      */
 	public Exercice(String nom){
 		
