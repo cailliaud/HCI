@@ -29,6 +29,7 @@ public class Action {
 	 */
 	private TortueG tortue;
 	
+	
 	/**
 	 * Creation d'une action
 	 * @param codeAction
