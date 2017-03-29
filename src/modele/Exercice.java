@@ -1,5 +1,7 @@
 package modele;
 
+import java.util.ArrayList;
+
 import javax.swing.ImageIcon;
 
 /**
@@ -18,6 +20,7 @@ public class Exercice {
 	private String nom;
 	private ImageIcon image; 
 	private TortueG tortue;
+	
 	
     /**
      * Constructeur, initialisation d'un exercice
@@ -89,5 +92,13 @@ public class Exercice {
      */
 	public void setTortue(TortueG tortue) {
 		this.tortue = tortue;
+	}
+	
+    /**
+     * Méthode qui permet de retourner toutes les tentatives
+     * @return la tortue associée à l'exercice
+     */
+	public ArrayList<Tentative> getTentativesExercice(Classe classe){
+		return null;
 	}
 }
