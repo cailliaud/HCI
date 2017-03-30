@@ -1,4 +1,4 @@
-package modele;
+package modele.tortue;
 
 /**
 * La tortue du programme LOGO. Graphique !

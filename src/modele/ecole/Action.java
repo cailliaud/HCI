@@ -1,4 +1,6 @@
-package modele;
+package modele.ecole;
+
+import modele.tortue.TortueG;
 
 /**
  * @author Anatole
