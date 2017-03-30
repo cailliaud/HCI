@@ -1,8 +1,10 @@
-package modele;
+package modele.ecole;
 
 import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
+
+import modele.tortue.TortueG;
 
 /**
  * Classe définissant un exercice caractérisé par :
