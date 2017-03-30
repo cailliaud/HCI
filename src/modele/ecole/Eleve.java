@@ -57,9 +57,9 @@ public class Eleve extends  Utilisateur {
 	
 	
 	/**
-	 * Methode pour r�cup�rer les tentatives d'un �l�ve selon un exercice
-	 * @param exercice Exercice recherch�
-	 * @return ArrayList<Tentative> Liste des tentatives pour l'exercice demand�
+	 * Methode pour récupérer les tentatives d'un élève selon un exercice
+	 * @param exercice Exercice recherché
+	 * @return ArrayList<Tentative> Liste des tentatives pour l'exercice demandé
 	 */
 	public ArrayList<Tentative> getListTentativeSelonExercice (Exercice exercice){
 		return null;
