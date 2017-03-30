@@ -3,9 +3,9 @@ package vue.navigation;
 import javax.swing.JPanel;
 
 /**
- * <b> Vue formulaire de connexion professeur</b>
- * 
- * Caractérisée par :
+ * <b> Vue définissant un formulaire de connexion pour les professeurs</b>
+ * <p>
+ * Cette vue est caractérisée par :
  * <ul>
  * 	   <li>L'affichage du nom de l'application</li>
  *     <li>L'affichage d'un texte qui invite l'utilisateur à se connecter</li>
@@ -15,7 +15,7 @@ import javax.swing.JPanel;
  *     	   informations de connexion sont correctes</li>
  *     <li>L'affichage d'un message d'erreur si les informations entrées ne sont pas valides</li>
  * </ul>
- * 
+ * </p>
  * @author Groupe 4
  *
  */
