@@ -1,14 +1,8 @@
 package vue.navigation;
 
-
-
-
-import javax.swing.ImageIcon;
 import javax.swing.table.AbstractTableModel;
 
-import modele.*;
-
-public class ClassTable extends AbstractTableModel {
+public class ModelTableauTentative extends AbstractTableModel {
 
 	@Override
 	public int getColumnCount() {
@@ -23,10 +17,9 @@ public class ClassTable extends AbstractTableModel {
 	}
 
 	@Override
-	public Object getValueAt(int arg0, int arg1) {
+	public Object getValueAt(int rowIndex, int columnIndex) {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
 
 }
