@@ -35,25 +35,20 @@ public class Action {
 	 * @param ordreAction
 	 * @param tortue
 	 */
-	public Action(int codeAction, int ordreAction, TortueG tortue) {
+	public Action(int codeAction,  TortueG tortue) {
 		this.codeAction = codeAction;
-		this.ordreAction = ordreAction;
 		this.tortue = tortue;
 	}
 	
 	//rejouer une action
 	
-	public int getIdAction() {
-		return idAction;
-	}
+
 
 	public int getCodeAction() {
 		return codeAction;
 	}
 
-	public int getOrdreAction() {
-		return ordreAction;
-	}
+
 	
 	public TortueG getTortue() {
 		return tortue;
