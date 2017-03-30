@@ -3,16 +3,19 @@ import java.util.ArrayList;
 
 
 /**
- * Difference between each statute
- * 0 -> la tentative n'a pas encore été faite
- * 1 -> la tentative a été faite par l'élève, en attente de correction
- * 2 -> tentative validé
- * 3 -> tentative a refaire
+ * <b>Description des tentatives d'un eleve pour un exercice</b>
+ * <p>Plusieurs statuts possible pour une tentative :
+ * <ol>
+ * <li>tentative pas encore faite</li>
+ * <li>tentative en attente de correction</li>
+ * <li>tentative a refaire</li>
+ * <li>tentative validé</li>
+ * </ol>
+ * </p>
  */
 
 public class Tentative {
 
-	private int idTentative;
 	private ArrayList<Action> action;
 	private Exercice exercice;
 	private int statut;
@@ -20,10 +23,8 @@ public class Tentative {
 	private String commentaire;
 	
 	    
-
-	public Tentative(int idTentative, Exercice exercice) {
+	public Tentative(Exercice exercice) {
 		super();
-		this.idTentative = idTentative;
 		this.exercice = exercice;
 		this.statut = 0;
 	}
@@ -42,18 +43,7 @@ public class Tentative {
 	public void supprimeAction( int code, int ordre){
 	}
 	
-	
 
-	
-	
-	/**
-	 * @return
-	 * getIdTentative permet de retourner l'id de la tentative
-	 */
-	
-	public int getIdTentative() {
-		return idTentative;
-	}
 
 	/**
 	 * @return
