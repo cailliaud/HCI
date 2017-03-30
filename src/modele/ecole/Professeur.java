@@ -1,10 +1,16 @@
 package modele.ecole;
 
+import java.util.ArrayList;
+
 /**
- * Classe Professeur
+ * <b>Classe Professeur</b>
+ * 
  * Contient le pseudo, le mot de passe ainsi que le statut de sa connexion
- * Un professeur ne peut posséder qu'une seule classe
- * Le login ne peut être changé mais le mot de passe oui
+ * <ul>
+ * 	<li>Un professeur ne peut posséder qu'une seule classe.</li>
+ *  <li>Le login ne peut être changé mais le mot de passe oui</li>
+ *  <li>Un professeur peut récupérer la Liste des tentatives qu'il doit corriger.</li>
+ * </ul>
  * 
  * @author caill
  *
@@ -56,16 +62,6 @@ public class Professeur extends Utilisateur{
 		
 	}
 	
-	/**
-	 * Methode pour que le professeur se connecte
-	 * @param login Login du professeur
-	 * @param pass mot de passe � tester
-	 * @return
-	 */
-	public boolean seConnecter(String login ,String pass){
-		return false;
-	}
-	
 	
 	/**
 	 * Getter pour la classe du professeur
@@ -81,5 +77,13 @@ public class Professeur extends Utilisateur{
 	 */
 	public void setNewPass( String password){
 		// check connecte
+	}
+	
+	/**
+	 * Fonction pour récupérer la liste des tentatives des élèves d'un Professeur non corrigées.
+	 * @return ArrayList<Tentative>
+	 */
+	public ArrayList<Tentative> getTentativesNonCorrigee(){
+		return null;
 	}
 }
