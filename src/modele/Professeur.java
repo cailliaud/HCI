@@ -18,10 +18,6 @@ public class Professeur extends Utilisateur{
 	 * password du professeur
 	 */
 	private String password;
-	/**
-	 * statut de connexion du professeur.
-	 */
-	private boolean connecte;
 	
 	/**
 	 * Classe du professeur
@@ -40,7 +36,6 @@ public class Professeur extends Utilisateur{
 		super( prenom,  nom,  homme);
 		this.login=login;
 		this.password=password;
-		this.connecte = false;
 		this.classe=classe;
 		
 	}
@@ -58,7 +53,6 @@ public class Professeur extends Utilisateur{
 		super( prenom,  nom,  homme, urlImage);
 		this.login=login;
 		this.password=password;
-		this.connecte = false;
 		
 	}
 	
@@ -72,20 +66,6 @@ public class Professeur extends Utilisateur{
 		return false;
 	}
 	
-	/**
-	 * Methode pour deconnecter le professeur
-	 */
-	public void seDeconnecter(){
-		this.connecte=false;
-	}
-
-	/**
-	 * Getter pour l'etat de connexion du profresseur
-	 * @return
-	 */
-	public boolean isConnected(){
-		return this.connecte;
-	}
 	
 	/**
 	 * Getter pour la classe du professeur

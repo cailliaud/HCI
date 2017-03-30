@@ -2,14 +2,11 @@ package modele;
 
 /**
  * @author Anatole
- * Stockage des actions avec leur id, leur code, la tortue utilisée et l'ordre dans la tentative
+ * Stockage des actions avec  leur code, la tortue utilisée et l'ordre dans la tentative
  */
 public class Action {	
 	
-	/**
-	 * idAction int identifiant de l'action, autoincrement --> pas d'id
-	 */
-	private int idAction;
+
 	/**
 	 * codeAction int représente les différentes actions possibles :
 	 * 1 -> avancer,
@@ -20,10 +17,12 @@ public class Action {
 	 * 6 -> changer de vitesse : un id par vitesse
 	 */
 	private int codeAction;
+
 	/**
-	 * ordreAction int définit l'ordre de l'action dans la tentative
+	 * Paramètre de l'action
+	 * La couleur choisie ou la vitesse
 	 */
-	private int ordreAction;
+	private String parametre;
 	/**
 	 * tortue TortueG tortue utilisée dans la tentative --> inutile : index arraylist
 	 */
