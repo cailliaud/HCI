@@ -8,5 +8,6 @@ import javax.swing.JPanel;
  * @author Groupe 4
  *
  */
+
 public class VueUtil extends JPanel {
 }
