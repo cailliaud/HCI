@@ -9,7 +9,7 @@ import javax.swing.ImageIcon;
  * 	- Un numéro unique qui permet de l'identifier
  *  - Un nom 
  *  - Une image
- *  - Une tortue 
+ *  - Une tortue ("Générale","Rapide", "Couleur")
  * @author Groupe 4
  * @version 29/03/2017
  */
@@ -19,7 +19,7 @@ public class Exercice {
 	private int numero;
 	private String nom;
 	private ImageIcon image; 
-	private TortueG tortue;
+	private String tortue;
 	
 	
     /**
@@ -82,7 +82,7 @@ public class Exercice {
      * Accésseur de la tortue associée à l'exercice
      * @return la tortue associée à l'exercice
      */
-	public TortueG getTortue() {
+	public String getTortue() {
 		return tortue;
 	}
 	
@@ -90,7 +90,7 @@ public class Exercice {
      * Changement de la tortue associée à l'exercice
      * @param  tortue   nouvelle tortue associée à l'exercice
      */
-	public void setTortue(TortueG tortue) {
+	public void setTortue(String tortue) {
 		this.tortue = tortue;
 	}
 }
