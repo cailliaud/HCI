@@ -3,8 +3,8 @@ import java.util.ArrayList;
 
 
 /**
- * <p> Cette classe repr�sente toute les classes qui sont pr�sentents dans l'�cole.</p>
- * <p> Chaque classe est r�pr�sent� par un id, un niveau et une liste d'exercice.</p>
+ * <p> Cette classe représente toute les classes qui sont présentents dans l'école.</p>
+ * <p> Chaque classe est réprésenté par un id, un niveau et une liste d'exercice.</p>
  * 
  * @author Group 4
  * @version 2017-03-29
@@ -18,7 +18,7 @@ public class Classe {
 	
 	/**
 	 * Constructeur de la classe Classe
-	 * @param id Le num�ro d'identification de la classe.
+	 * @param id Le numéro d'identification de la classe.
 	 * @param nom Le nom de la classe (CP, CE1, ...).
 	 * @param Professeur Le professeur en charge de la classe.
 	 */
@@ -30,7 +30,7 @@ public class Classe {
 	}
 	
 	/**
-	 * Cette m�thode permet de retourner l'identifiant de la classe.
+	 * Cette méthode permet de retourner l'identifiant de la classe.
 	 * @return L'identifiant de la classe est retourn�.
 	 */
 	public int getId() {
@@ -53,8 +53,8 @@ public class Classe {
 	}
 	
 	/**
-	 * Cette méthode permet de retourner la liste d'�l�ves de la classe.
-	 * @return listeEleves L'ensemble des �l�ves �tant dans la classe.
+	 * Cette méthode permet de retourner la liste d'élèves de la classe.
+	 * @return listeEleves L'ensemble des élèves étant dans la classe.
 	 */
 	public ArrayList<Eleve> getListeEleves() {
 		return listeEleves;
@@ -78,14 +78,14 @@ public class Classe {
 	}
 	
 	/**
-	 * Cette m�thode permet d'ajouter des exercices dans la liste.
+	 * Cette méthode permet d'ajouter des exercices dans la liste.
 	 * @param exercice Un exercice doit être dans les paramêtres afin de l'insérer dans la liste des exercices.
 	 */
 	public void addExercice (Exercice exercice){
 		this.listeExercice.add(exercice);
 	}
 	/**
-	 * Cette m�thode permet d'enlever un exercice dans la liste.
+	 * Cette méthode permet d'enlever un exercice dans la liste.
 	 * @param exercice Un exercice doit �tre dans les paramêtres afin de le supprimer dans la liste des exercices.
 	 */
 	public void removeExercice (Exercice exercice){
