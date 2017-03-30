@@ -1,6 +1,7 @@
 package vue.navigation;
 
 import javax.swing.JPanel;
+
 /** 
  * <b> Cette classe permet à l'élève de choisir l'exercice qu'il souhaite effectué.</b> 
  * 
@@ -13,7 +14,7 @@ import javax.swing.JPanel;
  * <p> Si le résultat est "acquis", l'exercice n'est plus disponible par l'élève, le bouton est grisée. </p>
  * <p> Un élève ne peut pas lancer deux exercices en même temps </p>
  * 
- * @author lesap
+ * @author groupe 4
  *
  */
 public class ChoixExercice extends JPanel {
