@@ -10,7 +10,14 @@ import modele.*;
 
 
 /**
- * AbastractTableModel 
+ * <b>ModelTableauEleve est le modele pour générer un JTable contenant des élèves </b>
+ * 
+ * <p>
+ * Ce tableau contiendra :
+ * <ul>
+ * 	<li> </li>
+ * </ul>
+ * </p>
  * @author Groupe 4 
  *
  */
