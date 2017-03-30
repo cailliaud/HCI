@@ -1,4 +1,4 @@
-package modele;
+package modele.ecole;
 
 
 import java.net.URL;
