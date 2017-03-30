@@ -3,18 +3,19 @@ package vue.navigation;
 import javax.swing.table.AbstractTableModel;
 
 /**
- * <b>ModelTableauEleve est le modele pour générer un JTable contenant des élèves </b>
+ * <b>ModelTableauProf est le modele pour générer un JTable avec la liste des profs  </b>
  * 
  * <p>
  * Ce tableau contiendra :
  * <ul>
- * 	<li>Icone de l'élève </li>
- *  <li>Prénom de l'élève</li>
+ * 	<li>Icone du Professeur </li>
+ *  <li>Prénom du Professeur</li>
+ *  <li>Nom du Professeur</li>
  * </ul>
  * </p>
  * <p>
- * Le ModelTableauEleve prendra en paramètre un professeur afin de récupérer sa Classe.
- * A partir de cette classe il sera possible de récupérer la liste des élèves.
+ * Le ModelTableauProf prendra en paramètre un ArrayList de Professeur
+ * A partir de cette classe il sera possible de récupérer le professeur
  * </p>
  * @author Groupe 4 
  *
