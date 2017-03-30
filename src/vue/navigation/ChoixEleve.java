@@ -6,8 +6,8 @@ import javax.swing.JPanel;
 /**
  * <b> Affichage du panel contenant les eleves pour qu'ils puissent entrer dans leur compte.<b/>
  * <p>
- * Contient un JTable avec modèle TableauEleve
- * Renvoie vers le panel ChoixExercice une fois le profil 
+ * Contient un JTable qui utilise le modèle ModelTableauEleve
+ * Renvoie vers le panel ChoixExercice une fois le profil selectionne
  * </p>
  * @author Groupe 4
  */
