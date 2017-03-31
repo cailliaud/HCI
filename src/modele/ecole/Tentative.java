@@ -5,12 +5,12 @@ import java.util.ArrayList;
 /**
  * <b>Description des tentatives d'un eleve pour un exercice</b>
  * <p>Plusieurs statuts possible pour une tentative :
- * <ol>
- * <li>tentative pas encore faite</li>
- * <li>tentative en attente de correction</li>
- * <li>tentative a refaire</li>
- * <li>tentative validé</li>
- * </ol>
+ * <ul>
+ * <li>1. tentative pas encore faite</li>
+ * <li>2. tentative en attente de correction</li>
+ * <li>3. tentative a refaire</li>
+ * <li>4. tentative validé</li>
+ * </ul>
  * </p>
  */
 
