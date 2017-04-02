@@ -1,6 +1,8 @@
 package modele.ecole;
 import java.util.ArrayList;
 
+import modele.tortue.Canvas;
+import modele.tortue.CanvasTortue;
 import modele.tortue.TortueCouleur;
 import modele.tortue.TortueG;
 import modele.tortue.TortueRapide; 
@@ -41,6 +43,40 @@ public class Tentative {
 	}
 	
 
+
+	/**
+	 * getAction permet de retourner la liste des  actions
+	 * @return ArrayList<Action> liste des actions
+	 * 
+	 */
+	
+	public ArrayList<Action> getActions() {
+		return this.listAction;
+	}
+	
+	/**
+	 * getAction permet de retourner l'exercice
+	 */
+	
+	public Exercice getExercice() {
+		return exercice;
+	}
+	
+	/**
+	 * getStatut permet de retourner le statut de l'exercice 
+	 */
+	public int getStatut() {
+		return statut;
+	}
+	
+	public void setStatut(int statut) {
+		this.statut = statut;
+	}
+	
+	public int getNote() {
+		return note;
+	}
+	
 	/**
 	 * Ajout de l'action à la tentative et réalisation de l'action 
 	 * @param int code : code de l'action à faire 
@@ -60,7 +96,6 @@ public class Tentative {
 		default:
 			break;
 		}
-		
 	}
 	
 	/**
@@ -83,8 +118,7 @@ public class Tentative {
 			break;
 		default:
 			break;
-		}
-		
+		}	
 	}
 	
 	/**
@@ -107,44 +141,6 @@ public class Tentative {
 		this.listAction = new ArrayList<Action>();
 	}
 	
-
-
-	/**
-	 * getAction permet de retourner la liste des  actions
-	 * @return ArrayList<Action> liste des actions
-	 * 
-	 */
-	
-	public ArrayList<Action> getActions() {
-		return this.listAction;
-	}
-	
-
-	
-	/**
-	 * getAction permet de retourner l'exercice
-	 */
-	
-	public Exercice getExercice() {
-		return exercice;
-	}
-	
-	
-	/**
-	 * getStatut permet de retourner le statut de l'exercice 
-	 */
-	public int getStatut() {
-		return statut;
-	}
-	
-	public void setStatut(int statut) {
-		this.statut = statut;
-	}
-	
-	public int getNote() {
-		return note;
-	}
-	
 	/**
 	 * Setter pour la note et le commentaire
 	 * La correction ne peut être faite qu'une seule fois
@@ -163,7 +159,6 @@ public class Tentative {
 		return commentaire;
 	}
 
-	
 	/**
 	 * Methode pour initialialiser la tortue de l'exercice.
 	 */
@@ -181,7 +176,25 @@ public class Tentative {
 		default:
 			break;
 		}
-
-	
 	}
+	
+   public void rejouerTentative(){
+	   initTortue();
+	   for (Action action : listAction) {
+		   switch (this.exercice.getTortue()) {
+			case "normale":
+				action.setTortue(this.tortueG);
+				break;
+			case "rapide":
+				action.setTortue(this.tortueR);
+				break;
+			case "couleur":
+				action.setTortue(this.tortueC);
+				break;
+			default:
+				break;
+			}
+			action.faireAction();
+		}
+   }
 }

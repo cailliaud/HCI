@@ -152,7 +152,10 @@ public class Action {
 	}
 	
 
-
+	public void setTortue(TortueG tortueG){
+		this.tortue = tortueG;
+	}
+	
 	public int getCodeAction() {
 		return codeAction;
 	}

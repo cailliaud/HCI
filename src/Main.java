@@ -29,11 +29,11 @@ public class Main {
 		fen.pack();
 		this.test = new Exercice("test","Couleur");
 		this.tentative = new Tentative(test);
-		this.tentative.initTortue();
 		for (int i = 0; i < 3; i++) {
-			this.tentative.ajoutAction(1);
-			this.tentative.ajoutAction(6);
+			this.tentative.ajoutAction(1,false);
+			this.tentative.ajoutAction(6,false);
 		}
+		this.tentative.rejouerTentative();
 		
 		
 		

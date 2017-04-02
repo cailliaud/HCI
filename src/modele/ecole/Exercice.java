@@ -85,5 +85,5 @@ public class Exercice {
 		return tortue;
 	}
 	
-   
+
 }
