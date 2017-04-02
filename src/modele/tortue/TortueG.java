@@ -4,7 +4,7 @@ package modele.tortue;
 * La tortue du programme LOGO. Graphique !
 *
 * @author Patrick Girard
-* @version f�vrier 201
+* @version février 2013
 */
 public class TortueG {
     // Position de la tortue

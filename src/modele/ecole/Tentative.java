@@ -1,5 +1,9 @@
 package modele.ecole;
-import java.util.ArrayList; 
+import java.util.ArrayList;
+
+import modele.tortue.TortueCouleur;
+import modele.tortue.TortueG;
+import modele.tortue.TortueRapide; 
 
 
 /**
@@ -16,50 +20,106 @@ import java.util.ArrayList;
 
 public class Tentative {
 
-	private ArrayList<Action> action;
+	private ArrayList<Action> listAction;
 	private Exercice exercice;
 	private int statut;
-	private String note;
+	private int note;
+	private boolean corrige;
 	private String commentaire;
+	private TortueG tortueG;
+	private TortueCouleur tortueC;
+	private TortueRapide tortueR;
+
 	
 	    
 	public Tentative(Exercice exercice) {
-		super();
 		this.exercice = exercice;
-		this.statut = 0;
+		this.statut = 1;
+		this.corrige = false;
+		listAction = new ArrayList<Action>();
+	
 	}
 	
-	
+
 	/**
-	 * Ajout de l'action à la tentative. 
+	 * Ajout de l'action à la tentative et réalisation de l'action 
+	 * @param int code : code de l'action à faire 
+	 * @see modele.ecole.Action
 	 */
-	public void ajoutAction( int code, int ordre){
+	public void ajoutAction(int code){
+		switch (this.exercice.getTortue()) {
+		case "normale":
+			this.listAction.add(new Action(code, this.tortueG,true));
+			break;
+		case "rapide":
+			this.listAction.add(new Action(code, this.tortueR,true));
+			break;
+		case "couleur":
+			this.listAction.add(new Action(code, this.tortueC,true));
+			break;
+		default:
+			break;
+		}
 		
 	}
 	
 	/**
-	 * Suppression de l'action de la tentative 
+	 * Ajout de l'action à la tentative avec boolean pour savoir si l'action est faite ou non. 
+	 * Fonction permettant de remplir la liste d'actions sans réaliser le dessin
+	 * @param int code : code de l'action à faire 
+	 * @param boolean doAction : True si on souhaite réaliser l'action sinon false
+	 * @see modele.ecole.Action
 	 */
-	public void supprimeAction( int code, int ordre){
+	public void ajoutAction(int code, boolean doAction){
+		switch (this.exercice.getTortue()) {
+		case "normale":
+			this.listAction.add(new Action(code, this.tortueG, doAction));
+			break;
+		case "rapide":
+			this.listAction.add(new Action(code, this.tortueR, doAction));
+			break;
+		case "couleur":
+			this.listAction.add(new Action(code, this.tortueC, doAction));
+			break;
+		default:
+			break;
+		}
+		
+	}
+	
+	/**
+	 * Fonction pour recommencer la tentative
+	 */
+	public void resetTentative(){
+		switch (this.exercice.getTortue()) {
+		case "normale":
+			this.tortueG.reset();
+			break;
+		case "rapide":
+			this.tortueR.reset();
+			break;
+		case "couleur":
+			this.tortueC.reset();
+			break;
+		default:
+			break;
+		}
+		this.listAction = new ArrayList<Action>();
 	}
 	
 
 
 	/**
-	 * @return
-	 * getAction permet de retourner les actions
+	 * getAction permet de retourner la liste des  actions
+	 * @return ArrayList<Action> liste des actions
+	 * 
 	 */
 	
-	public ArrayList<int[]> getActions() {
-		return null;
+	public ArrayList<Action> getActions() {
+		return this.listAction;
 	}
 	
-	/**
-	 * setAction permet de rentrer une nouvelle action 
-	 */
-	public void setActions(ArrayList<int[]> actions) {
-		
-	}
+
 	
 	/**
 	 * getAction permet de retourner l'exercice
@@ -69,13 +129,6 @@ public class Tentative {
 		return exercice;
 	}
 	
-	/**
-	 * setExercice permet de rentrer un nouveau exercice
-	 */
-	
-	public void setExercice(Exercice exercice) {
-		this.exercice = exercice;
-	}
 	
 	/**
 	 * getStatut permet de retourner le statut de l'exercice 
@@ -88,20 +141,47 @@ public class Tentative {
 		this.statut = statut;
 	}
 	
-	public String getNote() {
+	public int getNote() {
 		return note;
 	}
 	
-	public void setNote(String note) {
-		this.note = note;
+	/**
+	 * Setter pour la note et le commentaire
+	 * La correction ne peut être faite qu'une seule fois
+	 * @param int note 
+	 * @param String commentaire
+	 */
+	public void setCorrection(int note , String commentaire) {
+		if (!this.corrige){
+			this.note = note;
+			this.commentaire = commentaire;
+			this.corrige = true;
+		}
 	}
 	
 	public String getCommentaire() {
 		return commentaire;
 	}
+
 	
-	public void setCommentaire(String commentaire) {
-		this.commentaire = commentaire;
+	/**
+	 * Methode pour initialialiser la tortue de l'exercice.
+	 */
+	public void initTortue(){
+		switch (this.exercice.getTortue()) {
+		case "normale":
+			this.tortueG = new TortueG();
+			break;
+		case "rapide":
+			this.tortueR= new TortueRapide();	
+			break;
+		case "couleur":
+			this.tortueC = new TortueCouleur();
+			break;
+		default:
+			break;
+		}
+
+	
 	}
-	
 }

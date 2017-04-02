@@ -9,14 +9,14 @@ import javax.swing.ImageIcon;
  * 	- Un numéro unique qui permet de l'identifier
  *  - Un nom 
  *  - Une image
- *  - Une tortue ("Générale","Rapide", "Couleur")
+ *  - Une tortue ("normale","rapide", "couleur")
  * @author Groupe 4
  * @version 29/03/2017
  */
 
 public class Exercice {
 
-	private int numero;
+
 	private String nom;
 	private ImageIcon image; 
 	private String tortue;
@@ -26,24 +26,23 @@ public class Exercice {
      * Constructeur, initialisation d'un exercice
      * @param nom : Le nom de l'exercice
      */
-	public Exercice(String nom){
+	public Exercice(String nom, String typeTortue){
+		this.nom=nom;
+		this.tortue=controlTypeTortue(typeTortue);
+		
+		
 		
 	}
 	
-    /**
-     * Accésseur du numéro d'exercice
-     * @return le numéro d'exercice
-     */
-	public int getNumero() {
-		return numero;
-	}
+	private String controlTypeTortue(String tortue){
+		tortue = tortue.toLowerCase();
+		if (tortue.equals("normale") || tortue.equals("rapide") || tortue.equals("couleur")){
+			return  tortue;
+		}
+		else {
+			return "normale";
+		}
 
-    /**
-     * Changement du numéro d'exercice
-     * @param  num   nouveau numéro d'exercice
-     */
-	public void setNumero(int num) {
-		this.numero = num;
 	}
 
     /**
@@ -79,18 +78,12 @@ public class Exercice {
 	}
 
     /**
-     * Accésseur de la tortue associée à l'exercice
+     * Accessor de la tortue associée à l'exercice
      * @return la tortue associée à l'exercice
      */
 	public String getTortue() {
 		return tortue;
 	}
 	
-    /**
-     * Changement de la tortue associée à l'exercice
-     * @param  tortue   nouvelle tortue associée à l'exercice
-     */
-	public void setTortue(String tortue) {
-		this.tortue = tortue;
-	}
+   
 }
