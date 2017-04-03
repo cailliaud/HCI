@@ -12,14 +12,13 @@ import javax.swing.JTextField;
 import application.ControleurApplication;
 
 public class VueConnexionProf  extends JPanel{
-	private JFrame fenetre;
 	private JLabel titre, labLogin, labMdp;
 	private JTextField champLogin, champMdp;
 	private JPanel panelCo;
 	private JButton submit;
 	private ControleurApplication controleur;
 
-	public VueConnexionProf(JFrame fenetre, ControleurApplication controleur) {
+	public VueConnexionProf(ControleurApplication controleur) {
 		
 		this.titre = new JLabel("Identifiez-vous");
 		this.labLogin = new JLabel("Login :");
@@ -34,6 +33,7 @@ public class VueConnexionProf  extends JPanel{
 		panelCo.add(champMdp);
 		
 		submit = new JButton("Connexion");
+		this.addListener();
 
 	}
 	
