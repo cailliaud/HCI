@@ -3,6 +3,8 @@ package application;
 import javax.swing.JFrame;
 
 import application.general.VueConnexion;
+import application.professeur.connexion.ModeleConnexionProf;
+import application.professeur.connexion.VueConnexionProf;
 
 public class Navigation extends JFrame {
 
@@ -31,5 +33,18 @@ public class Navigation extends JFrame {
 	
 	public ControleurApplication getControleurApp(){
 		return this.controleur;
+	}
+	
+	public void goAppProf(){
+		this.getContentPane().removeAll();
+		ModeleConnexionProf modelCoProf = new ModeleConnexionProf();
+		VueConnexionProf vueCoProf = new VueConnexionProf(modelCoProf);
+		this.add(vueCoProf);
+		this.repaint();
+		this.revalidate();
+	}
+	
+	public void goAppEleve(){
+		
 	}
 }
