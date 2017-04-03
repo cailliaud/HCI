@@ -80,6 +80,17 @@ public class Professeur extends Utilisateur{
 	}
 	
 	/**
+	 * 
+	 */
+	public boolean testMdp(String mdp){
+		if (mdp.equals(this.password)) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	/**
 	 * Fonction pour récupérer la liste des tentatives des élèves d'un Professeur non corrigées.
 	 * @return ArrayList<Tentative>
 	 */
