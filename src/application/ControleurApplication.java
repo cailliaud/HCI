@@ -1,4 +1,4 @@
-package Main;
+package application;
 
 
 import javax.swing.JFrame;
@@ -8,10 +8,10 @@ import javax.swing.JTextField;
 
 import application.professeur.connexion.VueConnexionProf;
 
-public class ControleurMain {
+public class ControleurApplication {
 	private JFrame fen;
 	
-	public ControleurMain(JFrame fenetre){
+	public ControleurApplication(JFrame fenetre){
 		this.fen = fenetre;
 	}
 	
@@ -22,10 +22,7 @@ public class ControleurMain {
 	}
 	
 	public void goApplicationProf(){
-		this.fen.getContentPane().removeAll();
-		VueConnexionProf coProf = new VueConnexionProf(this.fen, this);
-		this.fen.repaint();
-		this.fen.revalidate();
+
 	}
 	
 	public void quitter(){
@@ -34,6 +31,7 @@ public class ControleurMain {
 	}
 	
 	
+
 	
 
 }
