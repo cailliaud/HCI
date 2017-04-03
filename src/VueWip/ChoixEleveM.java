@@ -22,24 +22,23 @@ import modele.ecole.Utilisateur;
  *
  * @author Groupe 4
  */
-public class ChoixEleve extends JPanel {
+public class ChoixEleveM {
 	
-	private JTable table;
-	private TabChoixUtil tableModel;
 	private Vector vector;
 	private ArrayList<Eleve> eleves;
-
-	public ChoixEleve(ArrayList<Eleve> eleves) {
-		this.eleves = eleves;
+	private ChoixEleveV choixEleve;
+	
+	public ChoixEleveM (ArrayList<Eleve> eleves) {
+		
 		vector = new Vector(10, 10);
+		
+		this.eleves = eleves;	
 		for (Eleve eleve : eleves) {
 			vector.addElement(eleve);
 		}
 		
-    tableModel = new TabChoixUtil(vector);
-    table = new JTable(tableModel);
-    JScrollPane scrollPane = new JScrollPane(table);
-    this.add(scrollPane);
-  }
+		choixEleve = new ChoixEleveV(vector);
+		
+	}
 	
 }
