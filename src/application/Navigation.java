@@ -6,29 +6,21 @@ import application.general.VueConnexion;
 import application.professeur.connexion.VueConnexionProf;
 
 public class Navigation extends JFrame {
-	private ControleurApplication controleur;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6555169507835811820L;
+	private ControleurApplication controleur= new ControleurApplication();
 
 	
 	public  Navigation(){
 		super();
-		this.controleur= new ControleurApplication(this);
-		this.add(new VueConnexion(this.controleur));
+		this.add(new VueConnexion());
 		
 		this.setVisible(true);
 		this.setExtendedState(JFrame.MAXIMIZED_BOTH); 
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-//		fen.add(Canvas.getCanvasPanel());
-//		
-//		this.test = new Exercice("test","Couleur");
-//		this.tentative = new Tentative(test);
-//		for (int i = 0; i < 3; i++) {
-//			this.tentative.ajoutAction(1,false);
-//			this.tentative.ajoutAction(6,false);
-//		}
-//		this.tentative.rejouerTentative();
-		
-		
-		
+	
 	}
 	
 
@@ -50,5 +42,9 @@ public class Navigation extends JFrame {
 		this.add(new VueConnexionProf());
 		this.repaint();
 		this.revalidate();
+	}
+	
+	public ControleurApplication getControleurApp(){
+		return this.controleur;
 	}
 }

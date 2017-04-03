@@ -1,18 +1,18 @@
 package application;
 
-
+import main.Main;
 
 public class ControleurApplication {
-
-	private Navigation nav;
-	public ControleurApplication(Navigation nav){
+	
+	
+	public ControleurApplication(){
 		
-		this.nav = nav;
+		
 	}
 	
 
 	public void quitter(){
-		this.nav.dispose();
+		Main.getNavigation().dispose();
 		System.exit(0);
 
 	}
@@ -22,7 +22,7 @@ public class ControleurApplication {
 	}
 	
 	public void goApplicationProf(){
-		this.nav.goAppProf();
+		Main.getNavigation().goAppProf();
 	}
 	
 

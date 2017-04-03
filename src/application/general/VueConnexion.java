@@ -1,5 +1,6 @@
 package application.general;
 
+
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 
@@ -9,16 +10,15 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import application.ControleurApplication;
+import main.Main;
 
 
 public class VueConnexion extends JPanel {
 	private JLabel logo;
 	private JButton eleveChoix, profChoix;
-	private ControleurApplication controleur;
 	private JButton exit;
 	
-	public VueConnexion ( ControleurApplication controleur){
-		this.controleur=controleur;
+	public VueConnexion ( ){
 		this.logo = new JLabel("TEST");
 		this.eleveChoix = new JButton("Je suis un eleve");
 		this.profChoix = new JButton("Je suis un professeur");
@@ -38,16 +38,16 @@ public class VueConnexion extends JPanel {
 	private void addListener(){
 		this.eleveChoix.addActionListener(
 				ae ->{
-					this.controleur.goApplicationEleve();
+					 Main.getNavigation().getControleurApp().goApplicationEleve();
 				});
 		this.profChoix.addActionListener(
 				ae ->{
-					this.controleur.goApplicationProf();
+					 Main.getNavigation().getControleurApp().goApplicationProf();
 				});
 		
 		this.exit.addActionListener(
 				ae ->{
-					this.controleur.quitter();
+					 Main.getNavigation().getControleurApp().quitter();
 				});
 	}
 }

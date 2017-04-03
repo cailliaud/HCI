@@ -1,4 +1,4 @@
-package Main;
+package main;
 
 import java.util.ArrayList;
 
@@ -17,20 +17,26 @@ import modele.ecole.Professeur;
 public class Main {
 
 	private static ArrayList<Professeur> listProf= new ArrayList<Professeur>();
-	private  Navigation navigation;
+	private static Navigation navigation = new Navigation();
 
-	public Main(){
-		navigation = new Navigation();
-	}
+	
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Main main = new Main();
+		
 	}
 	
 	public static ArrayList<Professeur> getListProf(){
 		return listProf;
+	}
+
+	public static Navigation getNavigation() {
+		return navigation;
+	}
+
+	public static void setNavigation(Navigation navigation) {
+		Main.navigation = navigation;
 	}
 	
 
