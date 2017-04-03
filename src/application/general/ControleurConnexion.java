@@ -1,22 +1,13 @@
 package application.general;
 
-import javax.swing.JFrame;
+import application.professeur.connexion.VueConnexionProf;
 
 public class ControleurConnexion {
-	private JFrame fen;
-	
-	public ControleurConnexion(JFrame fenetre){
-		this.fen = fenetre;
+	private VueConnexion vueCo;
+	public  ControleurConnexion(VueConnexion vueCo){
+		this.vueCo = vueCo;
 	}
 	
-	public void goApplicationEleve(){
-		this.fen.removeAll();
-	}
 	
-	public void goApplicationProf(){
-		this.fen.removeAll();
-		
-	}
 	
-
 }
