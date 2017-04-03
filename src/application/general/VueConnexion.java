@@ -12,15 +12,13 @@ import application.ControleurApplication;
 
 
 public class VueConnexion extends JPanel {
-	private JFrame fenetre;
 	private JLabel logo;
 	private JButton eleveChoix, profChoix;
 	private ControleurApplication controleur;
 	private JButton exit;
 	
-	public VueConnexion (JFrame fenetre, ControleurApplication controleur){
+	public VueConnexion ( ControleurApplication controleur){
 		this.controleur=controleur;
-		this.fenetre=fenetre;
 		this.logo = new JLabel("TEST");
 		this.eleveChoix = new JButton("Je suis un eleve");
 		this.profChoix = new JButton("Je suis un professeur");
@@ -32,7 +30,6 @@ public class VueConnexion extends JPanel {
 		choix.add(eleveChoix);
 		choix.add(profChoix);
 		this.add(choix, BorderLayout.CENTER);
-		fenetre.add(this);
 		exit = new JButton("Quitter");
 		this.add(exit,BorderLayout.EAST);
 		this.addListener();

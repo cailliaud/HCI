@@ -14,7 +14,7 @@ public class Navigation extends JFrame {
 		this.controleur = new ControleurApplication(this);
 		
 	
-		VueConnexion connexion = new VueConnexion(this,this.controleur);
+		this.add(new VueConnexion(this.controleur));
 
 		
 		this.setVisible(true);
