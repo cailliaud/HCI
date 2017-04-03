@@ -1,7 +1,9 @@
 package application.professeur.connexion;
 
 public class ConnexionProf {
+	
 	private String login, mdp;
+	
 	public ConnexionProf(){
 		
 	}
@@ -17,7 +19,5 @@ public class ConnexionProf {
 	public void setMdp(String mdp) {
 		this.mdp = mdp;
 	}
-	
-	
 
 }
