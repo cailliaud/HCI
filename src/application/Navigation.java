@@ -18,7 +18,7 @@ public class Navigation extends JFrame {
 
 		
 		this.setVisible(true);
-		this.pack();
+		this.setExtendedState(JFrame.MAXIMIZED_BOTH); 
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 //		fen.add(Canvas.getCanvasPanel());
 //		
