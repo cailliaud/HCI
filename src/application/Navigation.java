@@ -7,6 +7,7 @@ import application.professeur.connexion.VueConnexionProf;
 
 public class Navigation extends JFrame {
 	private ControleurApplication controleur;
+
 	
 	public  Navigation(){
 		super();
@@ -30,14 +31,21 @@ public class Navigation extends JFrame {
 		
 	}
 	
-	
-	private void cleanFenetre(){
+
+	public void cleanFenetre(){
 		this.getContentPane().removeAll();
 		this.repaint();
 		this.revalidate();
 	}
 	
 	public void goAppProf(){
+		this.getContentPane().removeAll();
+		this.add(new VueConnexionProf());
+		this.repaint();
+		this.revalidate();
+	}
+	
+	public void goAppEleve(){
 		this.getContentPane().removeAll();
 		this.add(new VueConnexionProf());
 		this.repaint();
