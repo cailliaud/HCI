@@ -7,17 +7,17 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import Main.ControleurMain;
+import application.ControleurApplication;
 
 public class VueConnexionProf  extends JPanel{
 	private JFrame fenetre;
 	private JLabel logo;
 	private JPanel coPanel;
 	private JButton eleveChoix, profChoix;
-	private ControleurMain controleur;
+	private ControleurApplication controleur;
 	private JButton exit;
 	
-	public VueConnexionProf(JFrame fenetre, ControleurMain controleur) {
+	public VueConnexionProf(JFrame fenetre, ControleurApplication controleur) {
 		this.controleur=controleur;
 		this.fenetre=fenetre;
 		

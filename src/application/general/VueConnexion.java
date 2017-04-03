@@ -8,17 +8,17 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import Main.ControleurMain;
+import application.ControleurApplication;
 
 
 public class VueConnexion extends JPanel {
 	private JFrame fenetre;
 	private JLabel logo;
 	private JButton eleveChoix, profChoix;
-	private ControleurMain controleur;
+	private ControleurApplication controleur;
 	private JButton exit;
 	
-	public VueConnexion (JFrame fenetre, ControleurMain controleur){
+	public VueConnexion (JFrame fenetre, ControleurApplication controleur){
 		this.controleur=controleur;
 		this.fenetre=fenetre;
 		this.logo = new JLabel("TEST");
