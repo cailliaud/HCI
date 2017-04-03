@@ -1,10 +1,10 @@
 package application.professeur.connexion;
 
-public class ConnexionProf {
+public class ModeleConnexionProf {
 	
 	private String login, mdp;
 	
-	public ConnexionProf(){
+	public ModeleConnexionProf(){
 		
 	}
 	public String getLogin() {
