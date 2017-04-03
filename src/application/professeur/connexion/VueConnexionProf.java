@@ -9,14 +9,17 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import application.ControleurApplication;
+
 
 public class VueConnexionProf  extends JPanel{
 	private JLabel titre, labLogin, labMdp;
 	private JTextField champLogin, champMdp;
 	private JPanel panelCo;
 	private JButton submit;
+	private ControleurConnexionProf controleur;
 
-	public VueConnexionProf() {
+	public VueConnexionProf(ModeleConnexionProf modele) {
 		
 		this.titre = new JLabel("Identifiez-vous");
 		this.labLogin = new JLabel("Login :");
@@ -39,7 +42,20 @@ public class VueConnexionProf  extends JPanel{
 
 	}
 	
+	
+	public String getChampLogin() {
+		return champLogin.getText();
+	}
+
+	public String getChampMdp() {
+		return champMdp.getText();
+	}
+
+
 	private void addListener(){
-		
+		this.submit.addActionListener(
+				ae ->{
+					this.controleur.submitFormulaire();
+				});
 	}
 }
