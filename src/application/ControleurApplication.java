@@ -22,7 +22,11 @@ public class ControleurApplication {
 	}
 	
 	public void goApplicationProf(){
-
+		this.fen.getContentPane().removeAll();
+		this.fen.add(new VueConnexionProf());
+		this.fen.repaint();
+		this.fen.revalidate();
+		
 	}
 	
 	public void quitter(){
