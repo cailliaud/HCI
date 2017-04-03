@@ -26,7 +26,7 @@ public class Main {
 		JFrame navigation = new JFrame();
 	
 		VueConnexion connexion = new VueConnexion(navigation);
-		
+		navigation.add(connexion);
 		
 		navigation.setVisible(true);
 		navigation.pack();
