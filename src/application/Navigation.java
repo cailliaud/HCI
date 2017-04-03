@@ -19,6 +19,7 @@ public class Navigation extends JFrame {
 		
 		this.setVisible(true);
 		this.pack();
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 //		fen.add(Canvas.getCanvasPanel());
 //		
 //		this.test = new Exercice("test","Couleur");
