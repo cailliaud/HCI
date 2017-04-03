@@ -9,23 +9,31 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import VueWip.ChoixEleveM;
+import VueWip.ChoixEleveV;
 import application.ControleurApplication;
+import main.Main;
 import modele.ecole.Eleve;
 import modele.ecole.Professeur;
 
 public class AppEleve {
 
-	private ChoixEleveM choixElevePan;
-	private ArrayList<Eleve> eleves;
-	private ArrayList<Professeur> professeurs;
+	private ChoixEleveM choixEleveM;
+	private ChoixEleveV choixEleveV;
+	private ArrayList<Eleve> eleves = new ArrayList<Eleve>();
 
-	public AppEleve(ArrayList<Professeur> professeurs) {
 
-		this.professeurs = professeurs;
-		//eleves.add(new Eleve("Jean", "Pauls", true, 12));
+	public AppEleve() {
+
 		
-		choixElevePan = new ChoixEleveM(eleves);
+		eleves.add(new Eleve("Jean", "Pauls", true, 12));
+		choixEleveM = new ChoixEleveM(eleves);
+		choixEleveV = new ChoixEleveV(choixEleveM);
+		
 
+	}
+	
+	public ChoixEleveV getChoixEleveV(){
+		return this.choixEleveV;
 	}
 
 	

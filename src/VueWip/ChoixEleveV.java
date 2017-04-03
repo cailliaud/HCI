@@ -13,12 +13,13 @@ public class ChoixEleveV extends JPanel {
 	
 	private JTable table;
 	private TabChoixUtil tableModel;
-	private Vector vector;
+	private ChoixEleveM modele;
 
-	public ChoixEleveV (Vector vector) {
+	public ChoixEleveV (ChoixEleveM modele) {
+		this.modele = modele;
 
-		this.vector = vector;
-	    tableModel = new TabChoixUtil(vector);
+	
+	    tableModel = new TabChoixUtil(modele);
 	    table = new JTable(tableModel);
 	    JScrollPane scrollPane = new JScrollPane(table);
 	    this.add(scrollPane);

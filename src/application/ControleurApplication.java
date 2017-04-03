@@ -18,12 +18,14 @@ public class ControleurApplication {
 	}
 	
 	public void goApplicationEleve(){
-		
+		Main.getNavigation().goAppEleve();
 	}
 	
 	public void goApplicationProf(){
 		Main.getNavigation().goAppProf();
 	}
+	
+	
 	
 
 	

@@ -14,9 +14,9 @@ public class TabChoixUtil extends AbstractTableModel {
     private Vector vector;
     private Utilisateur user;
 
-    public TabChoixUtil(Vector vector) {
+    public TabChoixUtil(ChoixEleveM modele) {
     	super();
-    	this.vector = vector;
+    	this.vector = modele.getVector();
     }
     
     public int getColumnCount() {

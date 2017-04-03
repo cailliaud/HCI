@@ -61,7 +61,7 @@ public class Utilisateur {
 		this.nom=nom;
 		this.homme = homme;
 		URL urlimage = Eleve.class.getResource(
-                "/resources/"+icone);
+                "/ressources/"+icone);
 		this.icone = new ImageIcon(urlimage);
 	}
 	
@@ -99,7 +99,7 @@ public class Utilisateur {
 
 	public void setIcone(String urlImage) {
 		URL urlimage = Eleve.class.getResource(
-                "/resources/"+icone);
+                "/ressources/"+icone);
 		this.icone = new ImageIcon(urlimage);
 		
 	}

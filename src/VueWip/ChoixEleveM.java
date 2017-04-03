@@ -37,8 +37,12 @@ public class ChoixEleveM {
 			vector.addElement(eleve);
 		}
 		
-		choixEleve = new ChoixEleveV(vector);
 		
+		
+	}
+	
+	public Vector getVector(){
+		return this.vector;
 	}
 	
 }
