@@ -32,7 +32,8 @@ public class VueConnexionProf  extends JPanel{
 		
 		submit = new JButton("Connexion");
 		this.add(titre, BorderLayout.NORTH);
-		this.add(panelCo);
+		this.add(panelCo, BorderLayout.CENTER);
+		this.add(panelCo, BorderLayout.SOUTH);
 		
 		this.addListener();
 
