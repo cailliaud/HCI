@@ -9,31 +9,25 @@ import javax.swing.JTextField;
 import application.professeur.connexion.VueConnexionProf;
 
 public class ControleurApplication {
-	private JFrame fen;
+	private Navigation nav;
 	
-	public ControleurApplication(JFrame fenetre){
-		this.fen = fenetre;
+	public ControleurApplication(Navigation nav){
+		this.nav = nav;
 	}
 	
-	public void goApplicationEleve(){
-		this.fen.getContentPane().removeAll();
-		this.fen.repaint();
-		this.fen.revalidate();
-	}
-	
-	public void goApplicationProf(){
-		this.fen.getContentPane().removeAll();
-		this.fen.add(new VueConnexionProf());
-		this.fen.repaint();
-		this.fen.revalidate();
-		
-	}
-	
+
 	public void quitter(){
-		this.fen.dispose();
+		this.nav.dispose();
 		System.exit(0);
 	}
 	
+	public void goApplicationEleve(){
+		
+	}
+	
+	public void goApplicationProf(){
+		this.nav.goAppProf();
+	}
 	
 
 	
