@@ -18,7 +18,6 @@ public class AppEleve {
 	private ChoixEleveM choixElevePan;
 	private ArrayList<Eleve> eleves;
 	private ArrayList<Professeur> professeurs;
-	private 
 
 	public AppEleve(ArrayList<Professeur> professeurs) {
 

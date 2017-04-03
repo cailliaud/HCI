@@ -62,11 +62,15 @@ public class Classe {
 	
 	/**
 	 * Cette méthode permet d'ajouter des élèves dans la classe.
+	 * Un eleve ne peut être plusieurs fois dans une classe et ne peut appartenir qu'à une seule classe
 	 * @param eleve Un élève doit être dans les paramêtres afin de l'insérer dans la liste de la classe.
 	 */
 	public void addEleve (Eleve eleve){
-		this.listeEleves.add(eleve);
-		eleve.setClasse(this);
+		if (!this.listeEleves.contains(eleve) && eleve.getClass()==null){
+			this.listeEleves.add(eleve);
+			eleve.setClasse(this);
+		}
+		
 	}
 	
 	/**
@@ -86,9 +90,12 @@ public class Classe {
 	}
 	/**
 	 * Cette méthode permet d'enlever un exercice dans la liste.
-	 * @param exercice Un exercice doit �tre dans les paramêtres afin de le supprimer dans la liste des exercices.
+	 * @param Exercice
 	 */
 	public void removeExercice (Exercice exercice){
+		if (this.listeExercice.contains(exercice)){
+			
+		}
 	}
 
 }
