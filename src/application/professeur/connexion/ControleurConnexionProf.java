@@ -12,14 +12,15 @@ public class ControleurConnexionProf {
 	
 	public ControleurConnexionProf(ControleurAppProf controlerApp){
 		this.controlerApp=controlerApp;
-		this.modeleCoProf = new ModeleConnexionProf();
 		this.vueCoProf = new VueConnexionProf(this);
 	}
 	
 	public void submitFormulaire(){
-		//this.modeleCoProf.setLogin(this.vueCoProf.getChampLogin());
-		//this.modeleCoProf.setMdp(this.vueCoProf.getChampMdp());
-		this.controlerApp.goMenu();
+		this.modeleCoProf = new ModeleConnexionProf();
+		this.modeleCoProf.setIdentifiants(this.vueCoProf.getChampLogin(), this.vueCoProf.getChampMdp());
+		this.modeleCoProf.testConnexion();
+		if (this.modeleCoProf.testConnexion())
+				this.controlerApp.goMenu();
 	}
 	
 	public JPanel getVue(){

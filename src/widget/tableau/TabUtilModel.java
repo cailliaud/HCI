@@ -1,4 +1,4 @@
-package application.general;
+package widget.tableau;
 
 import java.util.ArrayList;
 

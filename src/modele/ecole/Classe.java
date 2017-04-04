@@ -10,7 +10,6 @@ import java.util.ArrayList;
  * @version 2017-03-29
  */
 public class Classe {
-	private int id; 
 	private String nom;
 	private ArrayList<Eleve> listeEleves;
 	private ArrayList<Exercice> listeExercice;
@@ -18,24 +17,14 @@ public class Classe {
 	
 	/**
 	 * Constructeur de la classe Classe
-	 * @param id Le numéro d'identification de la classe.
 	 * @param nom Le nom de la classe (CP, CE1, ...).
-	 * @param Professeur Le professeur en charge de la classe.
 	 */
-	public Classe (int id, String nom){
+	public Classe ( String nom){
 		listeEleves = new ArrayList<Eleve>();
-		this.id=id;
 		this.nom=nom;
 		this.listeExercice = null;
 	}
 	
-	/**
-	 * Cette méthode permet de retourner l'identifiant de la classe.
-	 * @return L'identifiant de la classe est retourn�.
-	 */
-	public int getId() {
-		return id;
-	}
 
 	/**
 	 * Cette méthode permet de retourner le niveau de la classe.
@@ -66,7 +55,7 @@ public class Classe {
 	 * @param eleve Un élève doit être dans les paramêtres afin de l'insérer dans la liste de la classe.
 	 */
 	public void addEleve (Eleve eleve){
-		if (!this.listeEleves.contains(eleve) && eleve.getClass()==null){
+		if (!this.listeEleves.contains(eleve) && eleve.getClasse()==null){
 			this.listeEleves.add(eleve);
 			eleve.setClasse(this);
 		}

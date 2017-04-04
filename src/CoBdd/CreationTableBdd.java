@@ -32,4 +32,9 @@ public class CreationTableBdd {
 	    }
 	    System.out.println("Table created successfully");
 	  }
+	
+
+	public void chargeeData(){
+		
 	}
+}

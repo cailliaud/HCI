@@ -8,13 +8,13 @@ import java.sql.SQLException;
  *
  * @author
  */
-public class BddConnection {
+public class BddConnexion {
 	
 	private Connection co = null;
      /**
      *
      */
-	public BddConnection(){
+	public BddConnexion(){
         //paramètres bdd
         String url = "jdbc:sqlite:test.db";
         try {
