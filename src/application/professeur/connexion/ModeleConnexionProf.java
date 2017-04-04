@@ -6,14 +6,11 @@ import modele.ecole.Professeur;
 public class ModeleConnexionProf {
 	
 	private String login, mdp;
-	private Professeur prof = null;
+	private Professeur prof;
 	
-	public ModeleConnexionProf(String login, String mdp){
-		this.login= login;
-		this.mdp=mdp;
-		this.testConnexion();
+	public ModeleConnexionProf(){
 	}
-	
+
 	public String getLogin() {
 		return login;
 	}
@@ -22,16 +19,22 @@ public class ModeleConnexionProf {
 		return mdp;
 	}
 	
-	public void testConnexion(){
-		for (Professeur prof : Main.getListProf()) {
-			if (this.login == prof.getLogin() && this.mdp == prof.getPassword())
-				this.prof = prof;
-				break;
+	public boolean testConnexion(){
+		for (Professeur p : Main.getListProf()) {
+			if (this.login == p.getLogin() && this.mdp == p.getPassword())
+				this.prof = p;
+				return true;
 		}
+		return false;
 	}
 
 	public Professeur getProf() {
-		return prof;
+		return this.prof;
+	}
+
+	public void setIdentifiants(String champLogin, String champMdp) {
+		this.login = champLogin;
+		this.mdp = champMdp;
 	}
 
 }
