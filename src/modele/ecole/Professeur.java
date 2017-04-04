@@ -97,4 +97,10 @@ public class Professeur extends Utilisateur{
 	public ArrayList<Tentative> getTentativesNonCorrigee(){
 		return null;
 	}
+
+	public String getPassword() {
+		return password;
+	}
+	
+	
 }
