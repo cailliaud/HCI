@@ -1,4 +1,4 @@
-package application.eleve;
+package application.eleve.choixprof;
 
 
 import java.awt.BorderLayout;
@@ -25,29 +25,19 @@ import widget.tableau.TabUtil;
 public class ChoixProf extends JPanel {
 		
 	private TabUtil tabUtil;
-	private JLabel logo;
+
 	private ControleurTab controleurTab;
 	
 
 	public ChoixProf () {
 		
-		JPanel entete = new JPanel();
-		entete.setLayout(new BorderLayout());
-		JLabel connect = new JLabel("Eleve");
-		this.logo = new JLabel("Choisis ton Professeur !",SwingConstants.CENTER);
-		entete.add(connect, BorderLayout.WEST);
-		entete.add(logo, BorderLayout.CENTER);
-		RetourButton exit = new RetourButton();
-		entete.add(exit, BorderLayout.EAST);
+
 		
 
 		
 		this.setLayout(new BorderLayout());
 		
-		this.add(entete, BorderLayout.NORTH);
-		this.add(new JPanel(), BorderLayout.EAST);
-		this.add(new JPanel(), BorderLayout.WEST);
-		this.add(new JPanel(), BorderLayout.SOUTH);
+
 		
 		
 		tabUtil = new TabUtil(Main.getListProf());
