@@ -3,38 +3,6 @@ import java.sql.*;
 
 public class CreationInfoBdd
 {
-//  public static void main( String args[] )
-//  {
-//    Connection cn = null;
-//    Statement stm = null;
-//    try {
-//      Class.forName("org.sqlite.JDBC");
-//      cn = DriverManager.getConnection("jdbc:sqlite:test.db");
-//      cn.setAutoCommit(false);
-//      System.out.println("Opened database successfully");
-//
-//      stm = cn.createStatement();
-//      String sql = "INSERT INTO PROFESSEUR (ID_PROF,loginProf,passwd,nomProf,prenomProf) " +
-//                   "VALUES (1, 'l1', 'm1', 'aze', 'aze' );"; 
-//      stm.executeUpdate(sql);
-//
-//      sql = "INSERT INTO PROFESSEUR (ID_PROF,loginProf,passwd,nomProf,prenomProf) " +
-//            "VALUES (2, 'l2', 'm2', 'qsd', 'qsd' );"; 
-//      stm.executeUpdate(sql);
-//
-//      sql = "INSERT INTO PROFESSEUR (ID_PROF,loginProf,passwd,nomProf,prenomProf) " +
-//            "VALUES (3, 'l3', 'm3', 'poi', 'poi' );"; 
-//      stm.executeUpdate(sql);
-//
-//      stm.close();
-//      cn.commit();
-//      cn.close();
-//    } catch ( Exception e ) {
-//      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-//      System.exit(0);
-//    }
-//    System.out.println("Records created successfully");
-//  }
 	
 	 private Connection connect() {
 	        // SQLite connection string
@@ -68,6 +36,7 @@ public class CreationInfoBdd
 	        } catch (SQLException e) {
 	            System.out.println(e.getMessage());
 	        }
+	        System.out.println("Information created successfully");
 	    }
 	 
 	    /**
