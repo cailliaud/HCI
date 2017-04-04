@@ -3,18 +3,25 @@ package application.eleve.choixprof;
 import javax.swing.ListSelectionModel;
 
 import application.eleve.AppEleve;
+import application.eleve.ControleurAppEleve;
 import widget.tableau.ControleurTab;
 import widget.tableau.TabUtil;
 
 public class ControlerChoixProf extends ControleurTab {
-	private AppEleve app ;
-	public ControlerChoixProf(TabUtil tab, AppEleve app) {
+	
+	private ControleurAppEleve controleurApp ;
+	
+	
+	
+	public ControlerChoixProf(TabUtil tab, ControleurAppEleve app) {
 		super(tab);
-		this.app = app;
+		this.controleurApp = app;
 		ListSelectionModel listSelectionModel = this.tableau.getSelectionModel();        
 		listSelectionModel.addListSelectionListener(
 				e -> { updateVueInfo(e);
-				this.app.setEleve(this.eleve);
+				this.controleurApp.setProf(this.prof);
+				this.controleurApp.goChoixEleve();
+				
 
 				});
 	}

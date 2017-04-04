@@ -13,6 +13,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.SwingConstants;
 
+import application.eleve.AppEleve;
+import application.eleve.ControleurAppEleve;
 import main.Main;
 import modele.ecole.Classe;
 import modele.ecole.Eleve;
@@ -25,25 +27,16 @@ import widget.tableau.TabUtil;
 public class ChoixProf extends JPanel {
 		
 	private TabUtil tabUtil;
-
-	private ControleurTab controleurTab;
+	private ControlerChoixProf controleurTab;
 	
 
-	public ChoixProf () {
-		
+	public ChoixProf (ControleurAppEleve controlApp) {
 
-		
-
-		
 		this.setLayout(new BorderLayout());
-		
 
-		
-		
 		tabUtil = new TabUtil(Main.getListProf());
 		this.add(tabUtil,BorderLayout.CENTER);
-		controleurTab= new ControleurTab(tabUtil);
-		
+		controleurTab= new ControlerChoixProf(tabUtil,controlApp);
 		
 	    
 	}

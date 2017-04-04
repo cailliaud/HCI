@@ -55,7 +55,7 @@ public class Classe {
 	 * @param eleve Un élève doit être dans les paramêtres afin de l'insérer dans la liste de la classe.
 	 */
 	public void addEleve (Eleve eleve){
-		if (!this.listeEleves.contains(eleve) && eleve.getClass()==null){
+		if (!this.listeEleves.contains(eleve) && eleve.getClasse()==null){
 			this.listeEleves.add(eleve);
 			eleve.setClasse(this);
 		}

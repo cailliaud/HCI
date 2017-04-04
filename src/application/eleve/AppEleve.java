@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import javax.swing.JPanel;
 
+import application.eleve.choixeleve.ChoixEleve;
 import application.eleve.choixprof.ChoixProf;
 import application.professeur.ControleurAppProf;
 import application.professeur.connexion.ControleurConnexionProf;
@@ -21,20 +22,10 @@ public class AppEleve {
 
 	public AppEleve(ControleurAppEleve controleur) {
 		this.controleur = controleur;
-		
-
-		
-
-	}
-	
-	public ChoixProf getChoixProf(){
-		ChoixProf choixProf = new ChoixProf();
-		return choixProf;
 	}
 
 	public void setEleve(Eleve el){
 		this.eleve = el;
-		
 	}
 	
 	public void setProf(Professeur prof){
@@ -49,7 +40,10 @@ public class AppEleve {
 		return this.prof;
 	}
 	
+	////////////////////////
 	
+	
+
 	
 }
 

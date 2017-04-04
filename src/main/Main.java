@@ -60,6 +60,7 @@ public class Main {
 		listProf.add(new Professeur("Babu", "jhi", true, "c", "c", c2));
 		listProf.add(new Professeur("Alex", "ia", false, "d", "d", c3));
 		listProf.add(new Professeur("Anat", "ole", true, "e", "e", c4));
+	
 	}
 	
 	public static ArrayList<Professeur> getListProf(){
