@@ -1,4 +1,4 @@
-package application.general;
+package widget.boutons;
 
 import javax.swing.JButton;
 

@@ -13,15 +13,20 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.SwingConstants;
 
-import application.general.ExitButton;
-import application.general.TabUtil;
 import main.Main;
+import modele.ecole.Classe;
 import modele.ecole.Eleve;
+import modele.ecole.Professeur;
+import widget.boutons.ExitButton;
+import widget.boutons.RetourButton;
+import widget.tableau.ControleurTab;
+import widget.tableau.TabUtil;
 
 public class ChoixProf extends JPanel {
 		
 	private TabUtil tabUtil;
 	private JLabel logo;
+	private ControleurTab controleurTab;
 	
 
 	public ChoixProf () {
@@ -32,15 +37,10 @@ public class ChoixProf extends JPanel {
 		this.logo = new JLabel("Choisis ton Professeur !",SwingConstants.CENTER);
 		entete.add(connect, BorderLayout.WEST);
 		entete.add(logo, BorderLayout.CENTER);
-		ExitButton exit = new ExitButton();
+		RetourButton exit = new RetourButton();
 		entete.add(exit, BorderLayout.EAST);
 		
-		// Panel des boutons 
-		tabUtil = new TabUtil(Main.getListProf());
 
-	    this.add(tabUtil,BorderLayout.CENTER);
-		
-		
 		
 		this.setLayout(new BorderLayout());
 		
@@ -48,11 +48,16 @@ public class ChoixProf extends JPanel {
 		this.add(new JPanel(), BorderLayout.EAST);
 		this.add(new JPanel(), BorderLayout.WEST);
 		this.add(new JPanel(), BorderLayout.SOUTH);
-
+		
+		
+		tabUtil = new TabUtil(Main.getListProf());
+		this.add(tabUtil,BorderLayout.CENTER);
+		controleurTab= new ControleurTab(tabUtil);
 		
 		
 	    
 	}
+
 	
 }
 

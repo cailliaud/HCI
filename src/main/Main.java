@@ -3,6 +3,8 @@ package main;
 import java.util.ArrayList;
 
 import application.Navigation;
+import modele.ecole.Classe;
+import modele.ecole.Eleve;
 import modele.ecole.Professeur;
 
 
@@ -24,7 +26,10 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
+		Eleve babu = new Eleve("Babujhi", "Saspaanithy", true, 9);
+		Classe cl = new Classe("Encule");
+		cl.addEleve(babu);
+		listProf.add(new Professeur("Alex", "thomas", true, "acaill", "a", cl));
 	}
 	
 	public static ArrayList<Professeur> getListProf(){

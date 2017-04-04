@@ -3,6 +3,7 @@ package application.general;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.net.URL;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -13,6 +14,8 @@ import javax.swing.SwingConstants;
 
 import application.ControleurApplication;
 import main.Main;
+import modele.ecole.Eleve;
+import widget.boutons.ExitButton;
 
 
 public class VueConnexion extends JPanel {
@@ -32,8 +35,14 @@ public class VueConnexion extends JPanel {
 		entete.add(exit, BorderLayout.EAST);
 		
 		// Panel des boutons 
-		this.eleveChoix = new JButton(new ImageIcon("src/ressources/children.png"));
-		this.profChoix = new JButton(new ImageIcon("src/ressources/teacher.png"));
+		
+		
+		URL urlimage = VueConnexion.class.getResource(
+                "/ressources/children.png");
+		this.eleveChoix = new JButton(new ImageIcon(urlimage));
+		urlimage = VueConnexion.class.getResource(
+                "/ressources/teacher.png");
+		this.profChoix = new JButton(new ImageIcon(urlimage));
 		JPanel choix = new JPanel();
 		choix.setLayout(new GridLayout(1,2));
 		choix.add(eleveChoix);

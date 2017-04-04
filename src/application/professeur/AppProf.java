@@ -6,12 +6,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
-import application.general.ExitButton;
 import application.professeur.connexion.ControleurConnexionProf;
 import application.professeur.connexion.ModeleConnexionProf;
 import application.professeur.connexion.VueConnexionProf;
 import application.professeur.menu.MenuProf;
 import modele.ecole.Professeur;
+import widget.boutons.ExitButton;
 
 public class AppProf {
 	private Professeur prof;

@@ -6,7 +6,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
-import application.general.ExitButton;
+import widget.boutons.ExitButton;
+import widget.boutons.RetourButton;
 
 public class VueAppProf extends JPanel {
 	private JLabel logo;
@@ -20,7 +21,7 @@ public class VueAppProf extends JPanel {
 		this.logo = new JLabel("Connexion à un Compte Professeur",SwingConstants.CENTER);
 		entete.add(connect, BorderLayout.WEST);
 		entete.add(logo, BorderLayout.CENTER);
-		ExitButton exit = new ExitButton();
+		RetourButton exit = new RetourButton();
 		entete.add(exit, BorderLayout.EAST);
 		
 

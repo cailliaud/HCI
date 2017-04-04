@@ -41,6 +41,14 @@ public class Navigation extends JFrame {
 		return this.controleur;
 	}
 	
+	
+	public void goHome(){
+		this.getContentPane().removeAll();
+		this.add(new VueConnexion());
+		this.repaint();
+		this.revalidate();
+	}
+	
 	public void goAppProf(){
 		this.getContentPane().removeAll();
 		ControleurAppProf applicationProf = new ControleurAppProf();
