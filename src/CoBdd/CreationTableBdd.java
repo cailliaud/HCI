@@ -5,17 +5,16 @@ import java.sql.*;
 
 public class CreationTableBdd {
 
-	public static void main( String args[] )
-	  {
-		Connection cn = null;
-		Statement stm =null;
+	Connection co = null;
+	Statement stm =null;
+	
+	public CreationTableBdd(){
 		try {
 			Class.forName("org.sqlite.JDBC");
 		
-			 cn = DriverManager.getConnection("jdbc:sqlite:test.db");
+			 this.co = DriverManager.getConnection("jdbc:sqlite:test.db");
 			 System.out.println("Opened database successfully");
-			 
-			 stm = cn.createStatement();
+			 this.stm = co.createStatement();
 			 
 		      String sql = "CREATE TABLE PROFESSEUR " +
 		                   "(ID_PROF integer PRIMARY KEY," +
@@ -25,7 +24,7 @@ public class CreationTableBdd {
 		                   " prenomProf TEXT not null)"; 
 		      stm.executeUpdate(sql);
 		      stm.close();
-		      cn.close();
+		      co.close();
 			 
 	    } catch ( Exception e ) {
 	      System.err.println( e.getClass().getName() + ": " + e.getMessage() );

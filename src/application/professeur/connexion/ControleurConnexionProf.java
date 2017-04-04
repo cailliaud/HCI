@@ -24,5 +24,4 @@ public class ControleurConnexionProf {
 		return this.vueCoProf;
 	}
 	
-	
 }
