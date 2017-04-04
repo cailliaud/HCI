@@ -22,6 +22,6 @@ public class BddConnection {
 	        } catch (SQLException e) {
 	          System.out.println(e.getMessage());
 	        }  
-            System.out.println("Connection to SQLite has been established.");    
+            System.out.println("Connexion avec la base de données établie");    
     }
 }
