@@ -38,7 +38,6 @@ public class CreationInfoBdd
 	 
 	    	CreationInfoBdd app = new CreationInfoBdd(new BddConnexion());
 	    	CreationTableBdd table = new CreationTableBdd();
-	    	
 	        // insert three new rows
 	        app.insertProf(1, "l1", "m1", "aze", "aze");
 	        app.insertProf(2, "l2", "m2", "qsd", "qsd" );
