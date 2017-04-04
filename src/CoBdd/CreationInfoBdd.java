@@ -3,10 +3,10 @@ import java.sql.*;
 
 public class CreationInfoBdd
 {
-		private BddConnexion bddCo;
+		private Connection co;
 		
 	 	public CreationInfoBdd(BddConnexion bddCo){
-	 		this.bddCo = bddCo;
+	 		this.co = bddCo.getConnection();
 	 	}
 		/**
 	     * Insert a new row into the warehouses table
@@ -18,7 +18,7 @@ public class CreationInfoBdd
 	        String sql = "INSERT INTO PROFESSEUR (ID_PROF,loginProf,passwd,nomProf,prenomProf) values (?,?,?,?,?)";
 	 
 	        try (
-	            PreparedStatement pstmt = this.bddCo.getConnection().prepareStatement(sql)) {
+	            PreparedStatement pstmt = this.co.prepareStatement(sql)) {
 	            pstmt.setInt(1, id);
 	            pstmt.setString(2, login);
 	            pstmt.setString(3, mdp);
