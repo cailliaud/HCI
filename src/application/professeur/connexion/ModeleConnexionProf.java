@@ -11,6 +11,7 @@ public class ModeleConnexionProf {
 	public ModeleConnexionProf(String login, String mdp){
 		this.login= login;
 		this.mdp=mdp;
+		this.testConnexion();
 	}
 	
 	public String getLogin() {
@@ -21,11 +22,16 @@ public class ModeleConnexionProf {
 		return mdp;
 	}
 	
-	public Professeur testConnexion(){
+	public void testConnexion(){
 		for (Professeur prof : Main.getListProf()) {
-			
+			if (this.login == prof.getLogin() && this.mdp == prof.getPassword())
+				this.prof = prof;
+				break;
 		}
-		return null;
+	}
+
+	public Professeur getProf() {
+		return prof;
 	}
 
 }

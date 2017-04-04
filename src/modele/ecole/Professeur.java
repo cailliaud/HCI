@@ -101,6 +101,10 @@ public class Professeur extends Utilisateur{
 	public String getPassword() {
 		return password;
 	}
+
+	public String getLogin() {
+		return login;
+	}
 	
 	
 }
