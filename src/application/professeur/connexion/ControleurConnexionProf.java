@@ -17,7 +17,8 @@ public class ControleurConnexionProf {
 	
 	public void submitFormulaire(){
 		this.modeleCoProf = new ModeleConnexionProf(this.vueCoProf.getChampLogin(), this.vueCoProf.getChampMdp());
-		this.controlerApp.goMenu();
+		if (this.modeleCoProf.getProf() != null)
+			this.controlerApp.goMenu();
 	}
 	
 	public JPanel getVue(){
