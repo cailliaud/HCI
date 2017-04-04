@@ -54,7 +54,7 @@ public class VueConnexionProf  extends JPanel{
 	}
 
 	public void erreurConnexion(){
-		JOptionPane.showMessageDialog(this, "Les identifiants sont incorrects", "Error", JOptionPane.ERROR_MESSAGE);
+		JOptionPane.showMessageDialog(this, "Les identifiants sont incorrects", "Erreur", JOptionPane.ERROR_MESSAGE);
 	}
 
 	private void addListener(){
