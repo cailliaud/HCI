@@ -3,6 +3,7 @@ package application;
 import javax.swing.JFrame;
 
 import application.eleve.AppEleve;
+import application.eleve.ControleurAppEleve;
 import application.general.VueConnexion;
 import application.professeur.AppProf;
 import application.professeur.ControleurAppProf;
@@ -59,8 +60,8 @@ public class Navigation extends JFrame {
 	
 	public void goAppEleve(){
 		this.getContentPane().removeAll();
-		AppEleve applicationEleve = new AppEleve();
-		this.add(applicationEleve.getChoixEleveV());
+		ControleurAppEleve applicationEleve = new ControleurAppEleve();
+		this.add(applicationEleve.getvueAppliEleve());
 		this.repaint();
 		this.revalidate();
 	}

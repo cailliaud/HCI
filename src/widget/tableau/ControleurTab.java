@@ -8,19 +8,15 @@ import modele.ecole.Eleve;
 import modele.ecole.Professeur;
 
 public class ControleurTab {
-	private JTable tableau ;
-	private Eleve eleve;
-	private Professeur prof;
+	protected JTable tableau ;
+	protected Eleve eleve;
+	protected Professeur prof;
 	
 	public ControleurTab(TabUtil tab){
 		
 		this.tableau=tab.getTable();
 
-		ListSelectionModel listSelectionModel = this.tableau.getSelectionModel();        
-		listSelectionModel.addListSelectionListener(
-				e -> { updateVueInfo(e);
-
-				});
+		
 	}
 	
 	protected void updateVueInfo(ListSelectionEvent  le){
