@@ -3,9 +3,9 @@ import java.sql.*;
 
 public class CreationInfoBdd
 {
-		private BddConnection bddCo;
+		private BddConnexion bddCo;
 		
-	 	public CreationInfoBdd(BddConnection bddCo){
+	 	public CreationInfoBdd(BddConnexion bddCo){
 	 		this.bddCo = bddCo;
 	 	}
 		/**
@@ -14,7 +14,7 @@ public class CreationInfoBdd
 	     * @param name
 	     * @param capacity
 	     */
-	    public void insert(int id, String login, String mdp, String nom,String prenom) {
+	    public void insertProf(int id, String login, String mdp, String nom,String prenom) {
 	        String sql = "INSERT INTO PROFESSEUR (ID_PROF,loginProf,passwd,nomProf,prenomProf) values (?,?,?,?,?)";
 	 
 	        try (
@@ -36,12 +36,12 @@ public class CreationInfoBdd
 	     */
 	    public static void main(String[] args) {
 	 
-	    	CreationInfoBdd app = new CreationInfoBdd(new BddConnection());
+	    	CreationInfoBdd app = new CreationInfoBdd(new BddConnexion());
 	    	CreationTableBdd table = new CreationTableBdd();
 	    	
 	        // insert three new rows
-	        app.insert(1, "l1", "m1", "aze", "aze");
-	        app.insert(2, "l2", "m2", "qsd", "qsd" );
-	        app.insert(3, "l3", "m3", "poi", "poi" );
+	        app.insertProf(1, "l1", "m1", "aze", "aze");
+	        app.insertProf(2, "l2", "m2", "qsd", "qsd" );
+	        app.insertProf(3, "l3", "m3", "poi", "poi" );
 	    }
 }
