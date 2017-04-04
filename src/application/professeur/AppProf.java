@@ -9,18 +9,19 @@ import javax.swing.SwingConstants;
 import application.general.ExitButton;
 import application.professeur.connexion.ModeleConnexionProf;
 import application.professeur.connexion.VueConnexionProf;
+import application.professeur.menu.MenuProf;
 import modele.ecole.Professeur;
 
-public class ApplicationProf {
+public class AppProf {
 	private Professeur prof;
 	private JPanel vueAppliProf = new JPanel();
 	private JLabel logo;
 	private ControleurAppProf controleur;
 	
-	public ApplicationProf(){
+	public AppProf(){
 		JPanel entete = new JPanel();
 		entete.setLayout(new BorderLayout());
-		JLabel connect = new JLabel("Eleve");
+		JLabel connect = new JLabel("PROFESSEUR");
 		this.logo = new JLabel("Connexion à un Compte Professeur",SwingConstants.CENTER);
 		entete.add(connect, BorderLayout.WEST);
 		entete.add(logo, BorderLayout.CENTER);
@@ -57,10 +58,22 @@ public class ApplicationProf {
 	public void goConnexionProf(){
 		ModeleConnexionProf modelCoProf = new ModeleConnexionProf();
 		VueConnexionProf vueCoProf = new VueConnexionProf(modelCoProf);
+		this.logo.setText("Connexion à un Compte Professeur");
 		this.vueAppliProf.add(vueCoProf, BorderLayout.CENTER);
 		this.vueAppliProf.repaint();
 		this.vueAppliProf.revalidate();
+		
 	}
+	
+	public void goMenu(){
+		MenuProf menu = new MenuProf();
+		this.logo.setText("Menu");
+		this.vueAppliProf.add(menu, BorderLayout.CENTER);
+		this.vueAppliProf.repaint();
+		this.vueAppliProf.revalidate();
+	}
+	
+
 	
 
 }

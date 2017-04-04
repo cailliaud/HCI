@@ -14,7 +14,7 @@ import javax.swing.JTable;
 import javax.swing.SwingConstants;
 
 import application.general.ExitButton;
-import application.general.tabutilisateur.TabUtil;
+import application.general.TabUtil;
 import main.Main;
 import modele.ecole.Eleve;
 

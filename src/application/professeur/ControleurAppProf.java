@@ -3,8 +3,11 @@ package application.professeur;
 
 public class ControleurAppProf {
 	
-
-	public ControleurAppProf(ApplicationProf appliProf){
-		
+	private AppProf appplication;
+	
+	public   ControleurAppProf(AppProf appliProf){
+		this.appplication=appliProf;
 	}
+	
+	
 }

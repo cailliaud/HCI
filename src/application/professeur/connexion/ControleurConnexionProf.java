@@ -12,8 +12,9 @@ public class ControleurConnexionProf {
 	}
 	
 	public void submitFormulaire(){
-		this.modeleCoProf.setLogin(this.vueCoProf.getChampLogin());
-		this.modeleCoProf.setMdp(this.vueCoProf.getChampMdp());
+		//this.modeleCoProf.setLogin(this.vueCoProf.getChampLogin());
+		//this.modeleCoProf.setMdp(this.vueCoProf.getChampMdp());
+		
 	}
 	
 	
