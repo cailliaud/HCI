@@ -45,6 +45,8 @@ public class CreationInfoBdd
 	    public static void main(String[] args) {
 	 
 	    	CreationInfoBdd app = new CreationInfoBdd();
+	    	CreationTableBdd table = new CreationTableBdd();
+	    	
 	        // insert three new rows
 	        app.insert(1, "l1", "m1", "aze", "aze");
 	        app.insert(2, "l2", "m2", "qsd", "qsd" );
