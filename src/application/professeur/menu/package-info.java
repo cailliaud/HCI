@@ -5,4 +5,4 @@
  * @author caill
  *
  */
-package application.general.tabutilisateur;
+package application.professeur.menu;

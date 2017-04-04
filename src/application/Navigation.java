@@ -4,7 +4,8 @@ import javax.swing.JFrame;
 
 import application.eleve.AppEleve;
 import application.general.VueConnexion;
-import application.professeur.ApplicationProf;
+import application.professeur.AppProf;
+import application.professeur.ControleurAppProf;
 import application.professeur.connexion.ModeleConnexionProf;
 import application.professeur.connexion.VueConnexionProf;
 
@@ -42,7 +43,7 @@ public class Navigation extends JFrame {
 	
 	public void goAppProf(){
 		this.getContentPane().removeAll();
-		ApplicationProf applicationProf = new ApplicationProf();
+		ControleurAppProf applicationProf = new ControleurAppProf();
 		this.add(applicationProf.getvueAppliProf());
 		this.repaint();
 		this.revalidate();

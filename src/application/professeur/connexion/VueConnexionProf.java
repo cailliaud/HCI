@@ -19,9 +19,9 @@ public class VueConnexionProf  extends JPanel{
 	private JButton submit;
 	private ControleurConnexionProf controleur;
 
-	public VueConnexionProf(ModeleConnexionProf modele) {
+	public VueConnexionProf(ControleurConnexionProf controleur) {
 		
-	
+		this.controleur=controleur;
 		this.titre = new JLabel("Identifiez-vous");
 		this.labLogin = new JLabel("Login :");
 		this.champLogin = new JTextField();

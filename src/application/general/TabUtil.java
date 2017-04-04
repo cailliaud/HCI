@@ -1,4 +1,4 @@
-package application.general.tabutilisateur;
+package application.general;
 
 import java.util.ArrayList;
 
