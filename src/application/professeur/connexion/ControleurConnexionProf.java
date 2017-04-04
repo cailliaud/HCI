@@ -15,15 +15,11 @@ public class ControleurConnexionProf {
 		this.vueCoProf = new VueConnexionProf(this);
 	}
 	
-	public void submitFormulaire(String login, String mdp){
-		this.modeleCoProf = new ModeleConnexionProf(login, mdp);
+	public void submitFormulaire(){
+		this.modeleCoProf = new ModeleConnexionProf(this.vueCoProf.getChampLogin(), this.vueCoProf.getChampMdp());
 		this.controlerApp.goMenu();
 	}
 	
-	public void testConnexion(){
-		String login = this.vueCoProf.getChampLogin();
-		String mdp = this.vueCoProf.getChampMdp();
-	}
 	public JPanel getVue(){
 		return this.vueCoProf;
 	}
