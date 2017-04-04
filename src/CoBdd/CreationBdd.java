@@ -1,11 +1,11 @@
 package CoBdd;
 import java.sql.*;
 
-public class CreationInfoBdd
+public class CreationBdd
 {
 		private Connection co;
 		
-	 	public CreationInfoBdd(BddConnexion bddCo){
+	 	public CreationBdd(BddConnexion bddCo){
 	 		this.co = bddCo.getConnection();
 	 	}
 		/**
@@ -36,7 +36,7 @@ public class CreationInfoBdd
 	     */
 	    public static void main(String[] args) {
 	 
-	    	CreationInfoBdd app = new CreationInfoBdd(new BddConnexion());
+	    	CreationBdd app = new CreationBdd(new BddConnexion());
 	    	CreationTableBdd table = new CreationTableBdd();
 	        // insert three new rows
 	        app.insertProf(1, "l1", "m1", "aze", "aze");
