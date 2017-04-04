@@ -17,7 +17,6 @@ public class AppEleve {
 
 	private Eleve eleve;
 	private Professeur prof;
-	private ChoixProf choixProf;
 	private ControleurAppEleve controleur;
 
 	public AppEleve(ControleurAppEleve controleur) {
