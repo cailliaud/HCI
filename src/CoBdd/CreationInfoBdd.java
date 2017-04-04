@@ -4,8 +4,8 @@ import java.sql.*;
 public class CreationInfoBdd
 {
 	
-	 private Connection connect() {
-	        // SQLite connection string
+	private Connection connect() 
+		{
 	        String url = "jdbc:sqlite:test.db";
 	        Connection conn = null;
 	        try {
