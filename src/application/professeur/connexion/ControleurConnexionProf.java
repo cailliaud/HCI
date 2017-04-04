@@ -22,7 +22,6 @@ public class ControleurConnexionProf {
 		this.controlerApp.goMenu();
 	}
 	
-	
 	public JPanel getVue(){
 		return this.vueCoProf;
 	}
