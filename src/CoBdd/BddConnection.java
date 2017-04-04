@@ -9,25 +9,19 @@ import java.sql.SQLException;
  * @author
  */
 public class BddConnection {
+	
+	private Connection co = null;
      /**
      *
      */
-	public static void connect(){
-        Connection conn = null;
-        // db parameters
+	public BddConnection(){
+        //paramètres bdd
         String url = "jdbc:sqlite:test.db";
         try {
-        	conn = DriverManager.getConnection(url);
+        	this.co = DriverManager.getConnection(url);
 	        } catch (SQLException e) {
 	          System.out.println(e.getMessage());
 	        }  
-            System.out.println("Connection to SQLite has been established.");
-            
-    }
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        connect();
+            System.out.println("Connection to SQLite has been established.");    
     }
 }
