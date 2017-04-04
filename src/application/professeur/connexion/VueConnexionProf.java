@@ -23,7 +23,7 @@ public class VueConnexionProf  extends JPanel{
 	public VueConnexionProf(ControleurConnexionProf controleur) {
 		
 		this.controleur=controleur;
-		this.titre = new JLabel("Identifiez-vous");
+		this.titre = new JLabel("Identifiez-vous", JLabel.CENTER);
 		this.labLogin = new JLabel("Login :");
 		this.champLogin = new JTextField();
 		this.labMdp = new JLabel("Mot de passe :");
@@ -36,9 +36,11 @@ public class VueConnexionProf  extends JPanel{
 		panelCo.add(champMdp);
 		
 		submit = new JButton("Connexion");
-		this.add(titre, BorderLayout.NORTH);
-		this.add(panelCo, BorderLayout.CENTER);
-		this.add(submit, BorderLayout.SOUTH);
+		
+		this.setLayout(new GridLayout(3,1));
+		this.add(titre);
+		this.add(panelCo);
+		this.add(submit);
 		
 		this.addListener();
 
