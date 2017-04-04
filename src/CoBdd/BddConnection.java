@@ -24,4 +24,8 @@ public class BddConnection {
 	        }  
             System.out.println("Connexion avec la base de données établie");    
     }
+	
+	public Connection getConnection(){
+		return co;
+	}
 }

@@ -3,20 +3,12 @@ import java.sql.*;
 
 public class CreationInfoBdd
 {
-	
-	private Connection connect() 
-		{
-	        String url = "jdbc:sqlite:test.db";
-	        Connection conn = null;
-	        try {
-	            conn = DriverManager.getConnection(url);
-	        } catch (SQLException e) {
-	            System.out.println(e.getMessage());
-	        }
-	        return conn;
-	    }
-	 
-	    /**
+		private BddConnection bddCo;
+		
+	 	public CreationInfoBdd(BddConnection bddCo){
+	 		this.bddCo = bddCo;
+	 	}
+		/**
 	     * Insert a new row into the warehouses table
 	     *
 	     * @param name
@@ -25,8 +17,8 @@ public class CreationInfoBdd
 	    public void insert(int id, String login, String mdp, String nom,String prenom) {
 	        String sql = "INSERT INTO PROFESSEUR (ID_PROF,loginProf,passwd,nomProf,prenomProf) values (?,?,?,?,?)";
 	 
-	        try (Connection conn = this.connect();
-	                PreparedStatement pstmt = conn.prepareStatement(sql)) {
+	        try (
+	            PreparedStatement pstmt = this.bddCo.getConnection().prepareStatement(sql)) {
 	            pstmt.setInt(1, id);
 	            pstmt.setString(2, login);
 	            pstmt.setString(3, mdp);
@@ -44,7 +36,7 @@ public class CreationInfoBdd
 	     */
 	    public static void main(String[] args) {
 	 
-	    	CreationInfoBdd app = new CreationInfoBdd();
+	    	CreationInfoBdd app = new CreationInfoBdd(new BddConnection());
 	    	CreationTableBdd table = new CreationTableBdd();
 	    	
 	        // insert three new rows
