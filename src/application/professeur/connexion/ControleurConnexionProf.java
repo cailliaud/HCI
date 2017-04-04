@@ -16,5 +16,4 @@ public class ControleurConnexionProf {
 		this.modeleCoProf.setMdp(this.vueCoProf.getChampMdp());
 	}
 	
-	
 }
