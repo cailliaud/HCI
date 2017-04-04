@@ -10,6 +10,7 @@ import application.general.ExitButton;
 
 public class VueAppProf extends JPanel {
 	private JLabel logo;
+	private JPanel center;
 
 	
 	public VueAppProf(){
@@ -25,16 +26,20 @@ public class VueAppProf extends JPanel {
 
 		
 		this.setLayout(new BorderLayout());
-		
+		this.center = new JPanel();
 		this.add(entete, BorderLayout.NORTH);
 		this.add(new JPanel(), BorderLayout.EAST);
 		this.add(new JPanel(), BorderLayout.WEST);
 		this.add(new JPanel(), BorderLayout.SOUTH);
+		this.add(this.center, BorderLayout.CENTER);
 		
 	}
 	
-	public void setCenter(JPanel center){
-		this.add(center, BorderLayout.CENTER);
+	public void setCenter(JPanel newCenter){
+		
+		this.remove(this.center);
+		this.center= newCenter;
+		this.add(this.center, BorderLayout.CENTER);
 	
 		
 		
