@@ -21,9 +21,10 @@ public class ModeleConnexionProf {
 	
 	public boolean testConnexion(){
 		for (Professeur p : Main.getListProf()) {
-			if (this.login == p.getLogin() && this.mdp == p.getPassword())
+			if (this.login.equals(p.getLogin()) && this.mdp.equals(p.getPassword())){
 				this.prof = p;
 				return true;
+			}
 		}
 		return false;
 	}

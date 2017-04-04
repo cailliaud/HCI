@@ -6,6 +6,7 @@ import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -52,6 +53,9 @@ public class VueConnexionProf  extends JPanel{
 		return champMdp.getText();
 	}
 
+	public void erreurConnexion(){
+		JOptionPane.showMessageDialog(this, "Les identifiants sont incorrects", "Error", JOptionPane.ERROR_MESSAGE);
+	}
 
 	private void addListener(){
 		this.submit.addActionListener(
