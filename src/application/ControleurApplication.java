@@ -11,11 +11,6 @@ public class ControleurApplication {
 	}
 	
 
-	public void quitter(){
-		Main.getNavigation().dispose();
-		System.exit(0);
-
-	}
 	
 	public void goApplicationEleve(){
 		Main.getNavigation().goAppEleve();

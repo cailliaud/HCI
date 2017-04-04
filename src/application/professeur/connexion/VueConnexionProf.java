@@ -21,6 +21,7 @@ public class VueConnexionProf  extends JPanel{
 
 	public VueConnexionProf(ModeleConnexionProf modele) {
 		
+	
 		this.titre = new JLabel("Identifiez-vous");
 		this.labLogin = new JLabel("Login :");
 		this.champLogin = new JTextField();

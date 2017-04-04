@@ -4,6 +4,7 @@ import javax.swing.JFrame;
 
 import application.eleve.AppEleve;
 import application.general.VueConnexion;
+import application.professeur.ApplicationProf;
 import application.professeur.connexion.ModeleConnexionProf;
 import application.professeur.connexion.VueConnexionProf;
 
@@ -16,13 +17,16 @@ public class Navigation extends JFrame {
 	private ControleurApplication controleur= new ControleurApplication();
 
 	public  Navigation(){
-		super();
+		super("Navigation");
 
 		this.add(new VueConnexion());
-		this.setVisible(true);
-		this.setExtendedState(JFrame.MAXIMIZED_BOTH); 
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-	
+		this.setUndecorated (true);
+		this.setResizable(false);
+		this.setVisible (true);
+		this.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+
+		
 	}
 	
 	
@@ -38,9 +42,8 @@ public class Navigation extends JFrame {
 	
 	public void goAppProf(){
 		this.getContentPane().removeAll();
-		ModeleConnexionProf modelCoProf = new ModeleConnexionProf();
-		VueConnexionProf vueCoProf = new VueConnexionProf(modelCoProf);
-		this.add(vueCoProf);
+		ApplicationProf applicationProf = new ApplicationProf();
+		this.add(applicationProf.getvueAppliProf());
 		this.repaint();
 		this.revalidate();
 	}
