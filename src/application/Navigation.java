@@ -8,6 +8,7 @@ import application.professeur.AppProf;
 import application.professeur.ControleurAppProf;
 import application.professeur.connexion.ModeleConnexionProf;
 import application.professeur.connexion.VueConnexionProf;
+import exercice.VueExercice;
 
 public class Navigation extends JFrame {
 
@@ -53,7 +54,11 @@ public class Navigation extends JFrame {
 		this.getContentPane().removeAll();
 		AppEleve applicationEleve = new AppEleve();
 		this.add(applicationEleve.getChoixEleveV());
+		//VueExercice exercice = new VueExercice();
+		//this.add(exercice.getExercice());
 		this.repaint();
 		this.revalidate();
+		
+		
 	}
 }
