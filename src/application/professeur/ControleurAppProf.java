@@ -2,6 +2,8 @@ package application.professeur;
 
 import javax.swing.JPanel;
 
+import modele.ecole.Professeur;
+
 public class ControleurAppProf {
 	
 	private VueAppProf vue;
@@ -21,6 +23,7 @@ public class ControleurAppProf {
 	
 	public void goMenu(){
 		this.vue.setTitle("Menu");
+		this.vue.setConnect(new InfoUtil(this.modele.getProf()));
 		this.vue.setCenter(this.modele.getMenu());
 	}
 	
@@ -28,4 +31,12 @@ public class ControleurAppProf {
 		return this.vue;
 	}
 	
+	
+	public void setProfesseur(Professeur newProf){
+		this.modele.setProf(newProf);
+	}
+	
+	public Professeur getProfesseur(){
+		return this.modele.getProf();
+	}
 }

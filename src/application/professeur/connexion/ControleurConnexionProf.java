@@ -18,10 +18,12 @@ public class ControleurConnexionProf {
 	public void submitFormulaire(){
 		this.modeleCoProf = new ModeleConnexionProf();
 		this.modeleCoProf.setIdentifiants(this.vueCoProf.getChampLogin(), this.vueCoProf.getChampMdp());
-		if (this.modeleCoProf.testConnexion())
-			this.controlerApp.goMenu();
-		else
+		if (this.modeleCoProf.testConnexion()){
+			this.controlerApp.setProfesseur(this.modeleCoProf.getProf());
+			this.controlerApp.goMenu();}
+		else{
 			this.vueCoProf.erreurConnexion();
+		}
 	}
 	
 	public JPanel getVue(){

@@ -33,6 +33,14 @@ public class AppProf {
 
 	}
 	
+	public Professeur getProf(){
+		return this.prof;
+	}
+	
+	public void setProf(Professeur newProf){
+		this.prof = newProf;
+	}
+	
 
 	
 
