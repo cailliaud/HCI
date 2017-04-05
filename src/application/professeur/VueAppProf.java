@@ -6,19 +6,20 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
+import application.eleve.HomeEleveButton;
 import widget.boutons.ExitButton;
 import widget.boutons.HomeButton;
 
 public class VueAppProf extends JPanel {
 	private JLabel logo;
 	private JPanel center;
-    private JPanel connect;
+    private HomeProfButton connect;
     private JPanel entete;
 	
 	public VueAppProf(){
 		this.entete = new JPanel();
 		this.entete.setLayout(new BorderLayout());
-		this.connect = new JPanel();
+		this.connect = new HomeProfButton();
 		this.connect.add(new JLabel("Professeur"));
 		this.logo = new JLabel("Connexion à un Compte Professeur",SwingConstants.CENTER);
 		this.entete.add(connect, BorderLayout.WEST);
@@ -52,11 +53,13 @@ public class VueAppProf extends JPanel {
 		this.logo.setText(title);
 	}
 	
-	public void setConnect(JPanel newConnect){
+	public void setConnect(HomeProfButton newConnect){
 		this.entete.remove(this.connect);
 		this.connect=newConnect;
 		this.entete.add(this.connect, BorderLayout.WEST);
 	}
+	
+
 	
 	
 }

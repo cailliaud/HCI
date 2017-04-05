@@ -63,7 +63,10 @@ public class ControleurAppEleve {
 		this.vue.setTitle("Menu Elève");
 		MenuEleve menuEleve = new MenuEleve(this.modele.getEleve());
 		this.vue.setCenter(menuEleve);
-		this.vue.setConnect(new InfoUtil(this.getEleve()));
+		HomeEleveButton infoEleve = new HomeEleveButton(this);
+		this.vue.setConnect(infoEleve);
+	
+		
 	}
 
 }

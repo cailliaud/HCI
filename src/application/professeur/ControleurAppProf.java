@@ -2,6 +2,7 @@ package application.professeur;
 
 import javax.swing.JPanel;
 
+import application.eleve.HomeEleveButton;
 import modele.ecole.Professeur;
 import widget.InfoUtil;
 
@@ -24,7 +25,8 @@ public class ControleurAppProf {
 	
 	public void goMenu(){
 		this.vue.setTitle("Menu");
-		this.vue.setConnect(new InfoUtil(this.modele.getProf()));
+		HomeProfButton infoProf = new HomeProfButton(this);
+		this.vue.setConnect(infoProf);
 		this.vue.setCenter(this.modele.getMenu());
 	}
 	

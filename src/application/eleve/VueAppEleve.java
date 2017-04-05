@@ -6,19 +6,20 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
+import widget.InfoUtil;
 import widget.boutons.HomeButton;
 
 public class VueAppEleve extends JPanel {
 	private JLabel logo;
 	private JPanel center;
-    private JPanel connect;
+    private HomeEleveButton connect;
     private JPanel entete;
 
 	
 	public VueAppEleve(){
 		this.entete = new JPanel();
 		this.entete.setLayout(new BorderLayout());
-		this.connect = new JPanel();
+		this.connect = new HomeEleveButton();
 		this.connect.add(new JLabel("Eleve"));
 		this.logo = new JLabel("Choix Professeur",SwingConstants.CENTER);
 		this.entete.add(connect, BorderLayout.WEST);
@@ -52,9 +53,15 @@ public class VueAppEleve extends JPanel {
 		this.logo.setText(title);
 	}
 	
-	public void setConnect(JPanel newConnect){
+	public void setConnect(HomeEleveButton newConnect){
 		this.entete.remove(this.connect);
 		this.connect=newConnect;
 		this.entete.add(this.connect, BorderLayout.WEST);
+		
+	
 	}
+	
+	
+	
+	
 }

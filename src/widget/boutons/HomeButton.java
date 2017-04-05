@@ -7,7 +7,7 @@ import main.Main;
 
 public class HomeButton extends JButton {
 	public HomeButton(){
-		super("Retour Accueil");
+		super("Déconnexion");
 		
 		this.addActionListener(
 				ae -> {

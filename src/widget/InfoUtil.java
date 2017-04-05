@@ -12,10 +12,14 @@ import modele.ecole.Utilisateur;
 
 public class InfoUtil extends JPanel{
 	
-	private JButton logo = new JButton();
-	private JLabel nomUtil = new JLabel();
-	private Utilisateur uti;
+	protected JButton logo = new JButton();
+	protected JLabel nomUtil = new JLabel();
+	protected Utilisateur uti;
 	
+	
+	public InfoUtil(String string){
+		this.nomUtil = new JLabel(string, SwingConstants.CENTER);
+	}
 	public InfoUtil(Utilisateur uti){
 		
 		this.uti = uti;
@@ -27,4 +31,8 @@ public class InfoUtil extends JPanel{
 		this.add(nomUtil, BorderLayout.CENTER);
 		
 	}
+	
+
+	
+
 }
