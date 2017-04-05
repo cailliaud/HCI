@@ -11,16 +11,13 @@ import modele.ecole.Utilisateur;
 public class InfoUtil extends JPanel{
 	
 	private JLabel logo = new JLabel();
-	private JLabel nomUtil = new JLabel();
+	private JLabel nomUtil;
 	
 	public InfoUtil(Utilisateur uti){
 		
 		this.setLayout(new BorderLayout());
 		this.logo.setIcon(uti.getIcone());
-		this.logo.setHorizontalAlignment(SwingConstants.LEFT);
-		this.nomUtil.setText(uti.getPrenom());
-		this.nomUtil.setHorizontalAlignment(SwingConstants.CENTER);
-		
+		this.nomUtil = new JLabel(uti.getPrenom(), JLabel.CENTER);
 		
 		this.add(logo, BorderLayout.WEST);
 		this.add(nomUtil, BorderLayout.CENTER);
