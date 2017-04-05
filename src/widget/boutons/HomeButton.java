@@ -5,9 +5,9 @@ import javax.swing.JButton;
 import application.ControleurApplication;
 import main.Main;
 
-public class RetourButton extends JButton {
-	public RetourButton(){
-		super("Retour");
+public class HomeButton extends JButton {
+	public HomeButton(){
+		super("Retour Accueil");
 		
 		this.addActionListener(
 				ae -> {

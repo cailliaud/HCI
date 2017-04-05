@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
 import widget.boutons.ExitButton;
-import widget.boutons.RetourButton;
+import widget.boutons.HomeButton;
 
 public class VueAppProf extends JPanel {
 	private JLabel logo;
@@ -23,7 +23,7 @@ public class VueAppProf extends JPanel {
 		this.logo = new JLabel("Connexion à un Compte Professeur",SwingConstants.CENTER);
 		this.entete.add(connect, BorderLayout.WEST);
 		this.entete.add(logo, BorderLayout.CENTER);
-		RetourButton exit = new RetourButton();
+		HomeButton exit = new HomeButton();
 		this.entete.add(exit, BorderLayout.EAST);
 		
 
@@ -55,7 +55,7 @@ public class VueAppProf extends JPanel {
 	public void setConnect(JPanel newConnect){
 		this.entete.remove(this.connect);
 		this.connect=newConnect;
-		this.entete.add(this.connect);
+		this.entete.add(this.connect, BorderLayout.WEST);
 	}
 	
 	

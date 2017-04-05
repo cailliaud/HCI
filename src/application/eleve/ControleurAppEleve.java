@@ -4,10 +4,12 @@ import javax.swing.JPanel;
 
 import application.eleve.choixeleve.ChoixEleve;
 import application.eleve.choixprof.ChoixProf;
+import application.eleve.menu.MenuEleve;
 import application.professeur.AppProf;
 import application.professeur.VueAppProf;
 import modele.ecole.Eleve;
 import modele.ecole.Professeur;
+import widget.InfoUtil;
 
 public class ControleurAppEleve {
 	private VueAppEleve vue;
@@ -21,20 +23,7 @@ public class ControleurAppEleve {
 	
 
 	
-	
-	public void goChoixProf(){
-		this.vue.setTitle("Choix de ton Professeur");
-		ChoixProf choixProf = new ChoixProf(this);
-		this.vue.setCenter(choixProf);
-		
-	}
-	
-	public void goChoixEleve(){
-		this.vue.setTitle("Qui es tu?");
-		ChoixEleve choixEleve = new ChoixEleve(this.modele.getProfesseur());
-		this.vue.setCenter(choixEleve);
-	}
-	
+
 	public JPanel getvueAppliEleve(){
 		return this.vue;
 	}
@@ -54,6 +43,27 @@ public class ControleurAppEleve {
 	
 	public Professeur getProfesseur(){
 		return this.modele.getProfesseur();
+	}
+	
+	
+	public void goChoixProf(){
+		this.vue.setTitle("Choix de ton Professeur");
+		ChoixProf choixProf = new ChoixProf(this);
+		this.vue.setCenter(choixProf);
+		
+	}
+	
+	public void goChoixEleve(){
+		this.vue.setTitle("Qui es tu?");
+		ChoixEleve choixEleve = new ChoixEleve(this);
+		this.vue.setCenter(choixEleve);
+	}
+	
+	public void goMenuEleve(){
+		this.vue.setTitle("Menu Elève");
+		MenuEleve menuEleve = new MenuEleve(this.modele.getEleve());
+		this.vue.setCenter(menuEleve);
+		this.vue.setConnect(new InfoUtil(this.getEleve()));
 	}
 
 }
