@@ -9,6 +9,7 @@ import application.professeur.AppProf;
 import application.professeur.VueAppProf;
 import modele.ecole.Eleve;
 import modele.ecole.Professeur;
+import widget.InfoUtil;
 
 public class ControleurAppEleve {
 	private VueAppEleve vue;
@@ -62,6 +63,7 @@ public class ControleurAppEleve {
 		this.vue.setTitle("Menu Elève");
 		MenuEleve menuEleve = new MenuEleve(this.modele.getEleve());
 		this.vue.setCenter(menuEleve);
+		this.vue.setConnect(new InfoUtil(this.getEleve()));
 	}
 
 }

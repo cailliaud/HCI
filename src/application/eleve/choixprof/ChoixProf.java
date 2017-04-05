@@ -20,7 +20,7 @@ import modele.ecole.Classe;
 import modele.ecole.Eleve;
 import modele.ecole.Professeur;
 import widget.boutons.ExitButton;
-import widget.boutons.RetourButton;
+import widget.boutons.HomeButton;
 import widget.tableau.ControleurTab;
 import widget.tableau.TabUtil;
 

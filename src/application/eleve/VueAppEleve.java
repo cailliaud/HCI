@@ -6,7 +6,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
-import widget.boutons.RetourButton;
+import widget.boutons.HomeButton;
 
 public class VueAppEleve extends JPanel {
 	private JLabel logo;
@@ -23,7 +23,7 @@ public class VueAppEleve extends JPanel {
 		this.logo = new JLabel("Choix Professeur",SwingConstants.CENTER);
 		this.entete.add(connect, BorderLayout.WEST);
 		this.entete.add(logo, BorderLayout.CENTER);
-		RetourButton exit = new RetourButton();
+		HomeButton exit = new HomeButton();
 		this.entete.add(exit, BorderLayout.EAST);
 		
 
@@ -55,6 +55,6 @@ public class VueAppEleve extends JPanel {
 	public void setConnect(JPanel newConnect){
 		this.entete.remove(this.connect);
 		this.connect=newConnect;
-		this.entete.add(this.connect);
+		this.entete.add(this.connect, BorderLayout.WEST);
 	}
 }
