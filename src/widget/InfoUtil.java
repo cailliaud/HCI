@@ -12,9 +12,11 @@ import modele.ecole.Utilisateur;
 
 public class InfoUtil extends JPanel{
 	
+
 	protected JButton logo = new JButton();
 	protected JLabel nomUtil = new JLabel();
 	protected Utilisateur uti;
+
 	
 	
 	public InfoUtil(String string){
@@ -22,10 +24,11 @@ public class InfoUtil extends JPanel{
 	}
 	public InfoUtil(Utilisateur uti){
 		
-		this.uti = uti;
 		this.setLayout(new BorderLayout());
 		this.logo.setIcon(uti.getIcone());
 		this.nomUtil.setText(uti.getPrenom());
+		
+		this.nomUtil.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 		
 		this.add(logo, BorderLayout.WEST);
 		this.add(nomUtil, BorderLayout.CENTER);
