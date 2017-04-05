@@ -39,7 +39,7 @@ public class Professeur extends Utilisateur{
 	 * @param password mot de passe du professeur
 	 */
 	public Professeur (String prenom, String nom, boolean homme, String login, String password, Classe classe){
-		super( prenom,  nom,  homme);
+		super( prenom,  nom,  homme, "prof.png");
 		this.login=login;
 		this.password=password;
 		this.classe=classe;
