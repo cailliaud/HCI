@@ -3,6 +3,7 @@ package application.professeur;
 import javax.swing.JPanel;
 
 import modele.ecole.Professeur;
+import widget.InfoUtil;
 
 public class ControleurAppProf {
 	
