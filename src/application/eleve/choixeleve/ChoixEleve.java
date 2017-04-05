@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 
 import javax.swing.JPanel;
 
+import application.eleve.ControleurAppEleve;
 import main.Main;
 import modele.ecole.Professeur;
 import widget.tableau.ControleurTab;
@@ -12,14 +13,14 @@ import widget.tableau.TabUtil;
 public class ChoixEleve extends JPanel{
 	
 	private TabUtil tabUtil;
-	private ControleurTab controleurTab;
+	private ControlerChoixEleve controleurTab;
 	private Professeur prof;
 	
-	public ChoixEleve(Professeur prof){
+	public ChoixEleve(ControleurAppEleve controleur){
 		this.setLayout(new BorderLayout());
-		this.prof = prof;
+		this.prof = controleur.getProfesseur();
 		tabUtil = new TabUtil(this.prof.getClasse());
 		this.add(tabUtil,BorderLayout.CENTER);
-		controleurTab= new ControleurTab(tabUtil);
+		this.controleurTab= new ControlerChoixEleve(this.tabUtil, controleur);
 	}
 }

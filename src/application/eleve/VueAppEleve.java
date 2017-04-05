@@ -11,17 +11,20 @@ import widget.boutons.RetourButton;
 public class VueAppEleve extends JPanel {
 	private JLabel logo;
 	private JPanel center;
+    private JPanel connect;
+    private JPanel entete;
 
 	
 	public VueAppEleve(){
-		JPanel entete = new JPanel();
-		entete.setLayout(new BorderLayout());
-		JLabel connect = new JLabel("Eleve");
+		this.entete = new JPanel();
+		this.entete.setLayout(new BorderLayout());
+		this.connect = new JPanel();
+		this.connect.add(new JLabel("Eleve"));
 		this.logo = new JLabel("Choix Professeur",SwingConstants.CENTER);
-		entete.add(connect, BorderLayout.WEST);
-		entete.add(logo, BorderLayout.CENTER);
+		this.entete.add(connect, BorderLayout.WEST);
+		this.entete.add(logo, BorderLayout.CENTER);
 		RetourButton exit = new RetourButton();
-		entete.add(exit, BorderLayout.EAST);
+		this.entete.add(exit, BorderLayout.EAST);
 		
 
 		
@@ -49,4 +52,9 @@ public class VueAppEleve extends JPanel {
 		this.logo.setText(title);
 	}
 	
+	public void setConnect(JPanel newConnect){
+		this.entete.remove(this.connect);
+		this.connect=newConnect;
+		this.entete.add(this.connect);
+	}
 }
