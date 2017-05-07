@@ -9,9 +9,9 @@ public class CreationTables {
 		try {
 			 Statement stm = bdd.getConnexion().createStatement();
 			 String sql = "CREATE TABLE IF NOT EXISTS PROFESSEUR " +
-		                   "(idProf integer PRIMARY KEY," +
-		                   " login TEXT not null, " + 
-		                   " password TEXT not null, " + 
+		                   "(ID_PROF integer PRIMARY KEY," +
+		                   " loginProf TEXT not null, " + 
+		                   " passwd TEXT not null, " + 
 		                   " nomProf TEXT not null, " + 
 		                   " prenomProf TEXT not null)"; 
 		      stm.executeUpdate(sql);
