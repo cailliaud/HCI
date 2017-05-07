@@ -50,8 +50,8 @@ public class BaseDonnees
 	    	BaseDonnees app = new BaseDonnees();
 	    	app.connexionBDD();
 	        new CreationTablesBdd(app.getConnexion());
-	        app.insertProf(7, "abc", "abc", "abc", "abc");
-	        app.insertProf(8, "def", "def", "def", "def");
-	        app.insertProf(9, "ghi", "ghi", "ghi", "ghi");
+	        app.insertProf(1, "abc", "abc", "abc", "abc");
+	        app.insertProf(2, "def", "def", "def", "def");
+	        app.insertProf(3, "ghi", "ghi", "ghi", "ghi");
 	        }
 	    }
