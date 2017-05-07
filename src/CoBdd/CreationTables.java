@@ -6,7 +6,6 @@ import java.sql.*;
 public class CreationTables {
 	
 	public CreationTables(BaseDonnees bdd){
-		System.out.println("Création des tables de la bdd");
 		try {
 			 Statement stm = bdd.getConnexion().createStatement();
 			 String sql = "CREATE TABLE IF NOT EXISTS PROFESSEUR " +
@@ -20,6 +19,6 @@ public class CreationTables {
 	    } catch ( Exception e ) {
 	      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
 	    }
-		System.out.println("Création tables réussie");
+		System.out.println("Création tables");
 	  }
 }

@@ -30,7 +30,7 @@ public class Peuplement {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-        System.out.println("Insertions réussies");
+        System.out.println("Insertion professeur");
     }
 
 }
