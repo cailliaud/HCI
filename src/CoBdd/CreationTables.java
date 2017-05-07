@@ -3,12 +3,12 @@ package CoBdd;
 import java.sql.*;
 
 
-public class CreationTablesBdd {
+public class CreationTables {
 	
-	public CreationTablesBdd(Connection co){
+	public CreationTables(BaseDonnees bdd){
 		System.out.println("Création des tables de la bdd");
 		try {
-			 Statement stm = co.createStatement();
+			 Statement stm = bdd.getConnexion().createStatement();
 			 String sql = "CREATE TABLE IF NOT EXISTS PROFESSEUR " +
 		                   "(ID_PROF integer PRIMARY KEY," +
 		                   " loginProf TEXT not null, " + 
