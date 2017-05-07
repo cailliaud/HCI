@@ -5,32 +5,29 @@ public class BaseDonnees
 {
 		private Connection connexion = null;
 		
-		public boolean connexionBDD(){
+		public void connexionBDD(){
 	        try {
 	        	Class.forName("org.sqlite.JDBC");
-		        String url = "jdbc:sqlite:test.db";
-	        	this.connexion = DriverManager.getConnection(url);
-	        	return true;
-		        } 
-	        catch (SQLException e) {
-	        	System.out.println(e.getMessage());
-	        	return false;
-		        } 
-	        catch (ClassNotFoundException e) {
-	        	System.out.println(e.getMessage());
-	        	return false;
+	        	this.connexion = DriverManager.getConnection("jdbc:sqlite:test.db");
+		        } catch (SQLException e) {
+		        	System.out.println(e.getMessage());
+		        } catch (ClassNotFoundException e) {
+		        	System.out.println(e.getMessage());
 			}   
 		}
 		
+		public Connection getConnexion(){
+			return this.connexion;
+		}
+		
 		/**
-	     * Insert a new row into the warehouses table
-	     *
+	     * Insertion
 	     * @param name
 	     * @param capacity
 	     */
 	    public void insertProf(int id, String login, String mdp, String nom,String prenom) {
-	        String sql = "INSERT INTO PROFESSEUR (ID_PROF,loginProf,passwd,nomProf,prenomProf) values (?,?,?,?,?)";
-	 
+	        //Ignore pour ignorer les erreurs de constraintes primary key 
+	    	String sql = "INSERT OR IGNORE INTO PROFESSEUR (ID_PROF,loginProf,passwd,nomProf,prenomProf) values (?,?,?,?,?)";
 	        try (
 	            PreparedStatement pstmt = this.connexion.prepareStatement(sql)) {
 	            pstmt.setInt(1, id);
@@ -42,7 +39,7 @@ public class BaseDonnees
 	        } catch (SQLException e) {
 	            System.out.println(e.getMessage());
 	        }
-	        System.out.println("Information created successfully");
+	        System.out.println("Insertions réussies");
 	    }
 	 
 	    /**
@@ -51,16 +48,10 @@ public class BaseDonnees
 	    public static void main(String[] args) {
 	 
 	    	BaseDonnees app = new BaseDonnees();
-	        //Si la base existe déjà, on se connecte
-	    	if(app.connexionBDD() == true){
-	    		System.out.println("Connexion à la BDD réussie");
-	        }
-	    	//Sinon on crée les tables et on implémente les données
-	        else{
-	        	new CreationTableBdd();
-	        	app.insertProf(1, "abc", "abc", "abc", "abc");
-	        	app.insertProf(1, "def", "def", "def", "def");
-	        	app.insertProf(1, "ghi", "ghi", "ghi", "ghi");
+	    	app.connexionBDD();
+	        new CreationTablesBdd(app.getConnexion());
+	        app.insertProf(7, "abc", "abc", "abc", "abc");
+	        app.insertProf(8, "def", "def", "def", "def");
+	        app.insertProf(9, "ghi", "ghi", "ghi", "ghi");
 	        }
 	    }
-}
