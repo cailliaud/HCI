@@ -2,6 +2,7 @@ package main;
 
 import java.util.ArrayList;
 
+import CoBdd.BaseDonnees;
 import application.Navigation;
 import modele.ecole.Classe;
 import modele.ecole.Eleve;
@@ -26,6 +27,9 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		
+		new BaseDonnees();
+		
 		Eleve e1 = new Eleve("Azer", "ty");
 		Eleve e2 = new Eleve("Babujhi", "Saspaanithy");
 		Eleve e3 = new Eleve("Yoto", "Koitu");
