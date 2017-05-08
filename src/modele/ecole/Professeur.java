@@ -38,8 +38,8 @@ public class Professeur extends Utilisateur{
 	 * @param login login du professeur
 	 * @param password mot de passe du professeur
 	 */
-	public Professeur (String prenom, String nom, boolean homme, String login, String password, Classe classe){
-		super( prenom,  nom,  homme, "prof.png");
+	public Professeur (String prenom, String nom, String login, String password, Classe classe){
+		super( prenom,  nom, "prof.png");
 		this.login=login;
 		this.password=password;
 		this.classe=classe;
@@ -55,8 +55,8 @@ public class Professeur extends Utilisateur{
 	 * @param password mot de passe du professeur
 	 * @parem urlImage lien string de l'image du professeur dans le package ressources
 	 */
-	public Professeur (String prenom, String nom, boolean homme, String login, String password, String urlImage){
-		super( prenom,  nom,  homme, urlImage);
+	public Professeur (String prenom, String nom, String login, String password, String urlImage){
+		super( prenom,  nom, urlImage);
 		this.login=login;
 		this.password=password;
 		

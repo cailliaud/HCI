@@ -7,23 +7,19 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
 public class Eleve extends  Utilisateur {
-	private int age;
 	private Classe maClasse;
 	private ArrayList<Tentative> mesTentatives;
 	
-	public Eleve(String prenom, String nom, boolean homme, int age){
-		super(prenom,nom,homme,"child_icon.png");
-		this.age=age;
+	public Eleve(String prenom, String nom){
+		super(prenom,nom,"child_icon.png");
 		this.mesTentatives= new ArrayList<Tentative>();
 		
 
 
 	}
 	
-	public Eleve(String nom, String prenom, boolean homme,int age, String icone ){
-		super(prenom,nom,homme,icone);
-		this.age=age;
-
+	public Eleve(String nom, String prenom, String icone ){
+		super(prenom,nom,icone);
 	}
 	
 	public void setClasse(Classe c){

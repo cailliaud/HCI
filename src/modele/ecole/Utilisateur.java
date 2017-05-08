@@ -22,11 +22,6 @@ public class Utilisateur {
 	protected String nom;
 	
 	/**
-	 * Boolean : true si homme sinon false
-	 */
-	protected boolean homme;
-	
-	/**
 	 * Image de l'utilisateur
 	 */
 	protected ImageIcon icone;
@@ -42,10 +37,9 @@ public class Utilisateur {
  	 * @param nom Nom utilisateur
 	 * @param homme sexe utilisateur (true : homme sinon femme)
 	 */
-	public Utilisateur (String prenom, String nom, boolean homme){
+	public Utilisateur (String prenom, String nom){
 		this.prenom=prenom;
 		this.nom=nom;
-		this.homme = homme;
 	}
 	
 	
@@ -53,13 +47,11 @@ public class Utilisateur {
 	 * Constructeur de la classe utilisateur sans icone par defaut
 	 * @param prenom Prenom utilisateur
  	 * @param nom Nom utilisateur
-	 * @param homme sexe utilisateur (true : homme sinon femme)
 	 * @param icone string contenant le nom du fichier avec l'icone dans le package ressources
 	 */
-	public Utilisateur (String prenom, String nom, boolean homme, String icone ){
+	public Utilisateur (String prenom, String nom, String icone ){
 		this.prenom=prenom;
 		this.nom=nom;
-		this.homme = homme;
 		URL urlimage = Eleve.class.getResource(
                 "/ressources/"+icone);
 		this.icone = new ImageIcon(urlimage);
@@ -83,14 +75,6 @@ public class Utilisateur {
 
 	public void setNom(String nom) {
 		this.nom = nom;
-	}
-
-	public boolean isHomme() {
-		return homme;
-	}
-
-	public void setSexe(boolean homme) {
-		this.homme = homme;
 	}
 
 	public ImageIcon getIcone() {
