@@ -21,6 +21,7 @@ public class BaseDonnees
 		}
 		
 		public void creationTables(){
+			// Table CLASSE
 			try {
 				 Statement stm = this.connexion.createStatement();
 				 String sql = "CREATE TABLE IF NOT EXISTS CLASSE " +
@@ -31,13 +32,32 @@ public class BaseDonnees
 		    } catch (Exception e) {
 		      System.err.println(e.getMessage());
 		    }
+			// Table PROFESSEUR
 			try {
 				 Statement stm = this.connexion.createStatement();
 				 String sql = "CREATE TABLE IF NOT EXISTS PROFESSEUR " +
-			                   "(login TEXT PRIMARY KEY not null, " + 
+			                   "(login TEXT PRIMARY KEY, " +
 			                   " password TEXT not null, " + 
+			                   " idClasse integer not null, " + 
 			                   " nom TEXT not null, " + 
-			                   " prenom TEXT not null)"; 
+			                   " prenom TEXT not null, " +
+			                   " icone TEXT not null, " +
+			                   " FOREIGN KEY (idClasse) REFERENCES CLASSE(idClasse))"; 
+			      stm.executeUpdate(sql);
+			      stm.close();	 
+		    } catch (Exception e) {
+		      System.err.println(e.getMessage());
+		    }
+			// Table ELEVE
+			try {
+				 Statement stm = this.connexion.createStatement();
+				 String sql = "CREATE TABLE IF NOT EXISTS ELEVE " +
+			                   "(idEleve integer PRIMARY KEY, " +
+			                   " idClasse integer not null, " + 
+			                   " nom TEXT not null, " + 
+			                   " prenom TEXT not null, " +
+			                   " icone TEXT not null, " +
+			                   " FOREIGN KEY (idClasse) REFERENCES CLASSE(idClasse))"; 
 			      stm.executeUpdate(sql);
 			      stm.close();	 
 		    } catch (Exception e) {
