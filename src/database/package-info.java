@@ -5,4 +5,4 @@
  * @author lesap
  *
  */
-package CoBdd;
+package database;

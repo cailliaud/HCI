@@ -2,8 +2,8 @@ package main;
 
 import java.util.ArrayList;
 
-import CoBdd.BaseDonnees;
 import application.Navigation;
+import database.BaseDonnees;
 import modele.ecole.Classe;
 import modele.ecole.Eleve;
 import modele.ecole.Professeur;

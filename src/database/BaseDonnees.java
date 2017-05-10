@@ -1,4 +1,4 @@
-package CoBdd;
+package database;
 import java.sql.*;
 
 public class BaseDonnees {
